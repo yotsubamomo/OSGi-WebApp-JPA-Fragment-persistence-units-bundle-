@@ -1,0 +1,2536 @@
+Manifest-Version: 1.0
+TODAY: June 4 2011
+Implementation-Vendor: Eclipse.org - EclipseLink Project
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-SymbolicName: org.eclipse.persistence.jpa
+Require-Bundle: org.eclipse.persistence.core;bundle-version="2.3.0";visibility:=reexport,
+ org.eclipse.persistence.asm;bundle-version="2.3.0";resolution:=optional
+Bundle-Version: 2.3.0.v20110604-r9504
+Export-Package: org.eclipse.persistence.internal.jpa;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.indirection,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.mappings.foundation,
+   org.eclipse.persistence.internal.identitymaps,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.jpa,
+   org.eclipse.persistence.descriptors.invalidation,
+   org.eclipse.persistence.expressions,
+   org.eclipse.persistence.internal.jpa.parsing,
+   org.eclipse.persistence.platform.database,
+   org.eclipse.persistence.platform.database.oracle.plsql,
+   org.eclipse.persistence.internal.jpa.parsing.jpql,
+   org.eclipse.persistence.internal.queries,
+   org.eclipse.persistence.internal.databaseaccess,
+   org.eclipse.persistence.queries,
+   org.eclipse.persistence.internal.jpa.querydef,
+   javax.persistence,
+   javax.persistence.metamodel,
+   org.eclipse.persistence.sessions.server,
+   org.eclipse.persistence.internal.jpa.deployment,
+   javax.persistence.criteria,
+   org.eclipse.persistence.sessions.broker,
+   org.eclipse.persistence.config,
+   javax.persistence.spi,
+   org.eclipse.persistence.sessions.factories,
+   org.eclipse.persistence.tools.schemaframework,
+   javax.sql,
+   org.eclipse.persistence.internal.jpa.transaction,
+   org.eclipse.persistence.internal.jpa.jdbc,
+   org.eclipse.persistence.sessions.coordination.jms,
+   org.eclipse.persistence.descriptors.partitioning,
+   org.eclipse.persistence.platform.server,
+   org.eclipse.persistence.internal.jpa.metamodel,
+   org.eclipse.persistence.tools.profiler,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.sessions.coordination,
+   org.eclipse.persistence.sequencing,
+   org.eclipse.persistence.platform.database.partitioning,
+   org.eclipse.persistence.logging,
+   org.eclipse.persistence.sessions.coordination.rmi,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.weaving,
+   org.eclipse.persistence.platform.database.converters,
+   javax.transaction,
+   org.eclipse.persistence.history",
+ org.eclipse.persistence.internal.jpa.deployment;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.jpa,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.listeners,
+   javax.validation,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.logging,
+   javax.persistence.spi,
+   javax.persistence,
+   javax.xml.parsers,
+   org.xml.sax,
+   org.eclipse.persistence.internal.jpa.deployment.xml.parser,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   javax.persistence.metamodel,
+   javax.sql",
+ org.eclipse.persistence.internal.jpa.deployment.xml.parser;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.jdbc,
+   javax.sql,
+   org.eclipse.persistence.internal.jpa.deployment,
+   javax.persistence.spi,
+   org.xml.sax,
+   org.eclipse.persistence.internal.helper,
+   org.w3c.dom",
+ org.eclipse.persistence.internal.jpa.jdbc;version="2.3.0.v20110604-r9504";uses:="javax.sql,org.eclipse.persistence.internal.jpa.transaction",
+ org.eclipse.persistence.internal.jpa.metadata;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.inheritance,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.listeners,
+   org.eclipse.persistence.config,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.helper,
+   javax.persistence,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.internal.jpa.modelgen,
+   org.eclipse.persistence.logging,
+   org.eclipse.persistence.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.deployment,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.jpa,
+   javax.persistence.spi,
+   org.eclipse.persistence.internal.jpa.metadata.converters,
+   org.eclipse.persistence.platform.database.converters,
+   org.eclipse.persistence.internal.jpa.metadata.queries,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.descriptors.partitioning,
+   org.eclipse.persistence.internal.jpa.metadata.sequencing,
+   org.eclipse.persistence.internal.databaseaccess,
+   org.eclipse.persistence.sequencing,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.jpa.dynamic,
+   org.eclipse.persistence.internal.jpa.metadata.partitioning,
+   org.eclipse.persistence.dynamic",
+ org.eclipse.persistence.internal.jpa.metadata.accessors;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.partitioning,
+   org.eclipse.persistence.descriptors.partitioning,
+   org.eclipse.persistence.internal.jpa.metadata.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.converters,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects",
+ org.eclipse.persistence.internal.jpa.metadata.accessors.classes;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.queries,
+   org.eclipse.persistence.platform.database.oracle.annotations,
+   org.eclipse.persistence.internal.jpa.metadata.structures,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata.copypolicy,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.changetracking,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   javax.persistence,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.internal.jpa.metadata.inheritance,
+   org.eclipse.persistence.internal.jpa.metadata.listeners,
+   org.eclipse.persistence.internal.jpa.metadata.locking,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.internal.jpa.metadata.cache,
+   org.eclipse.persistence.internal.jpa.metadata.additionalcriteria,
+   org.eclipse.persistence.internal.jpa.metadata.multitenant,
+   org.eclipse.persistence.internal.jpa.metadata.sequencing,
+   org.eclipse.persistence.queries",
+ org.eclipse.persistence.internal.jpa.metadata.accessors.mappings;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.sequencing,
+   org.eclipse.persistence.internal.jpa.metadata.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.converters,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.helper,
+   javax.persistence,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.indirection,
+   org.eclipse.persistence.mappings.foundation,
+   org.eclipse.persistence.internal.queries,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.indirection,
+   org.eclipse.persistence.internal.jpa.metadata.transformers",
+ org.eclipse.persistence.internal.jpa.metadata.accessors.objects;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.indirection,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   javax.persistence,
+   org.eclipse.persistence.internal.libraries.asm,
+   org.eclipse.persistence.internal.libraries.asm.commons,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.xml",
+ org.eclipse.persistence.internal.jpa.metadata.additionalcriteria;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects",
+ org.eclipse.persistence.internal.jpa.metadata.cache;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.config,
+   org.eclipse.persistence.descriptors.invalidation",
+ org.eclipse.persistence.internal.jpa.metadata.changetracking;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.descriptors.changetracking,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects",
+ org.eclipse.persistence.internal.jpa.metadata.columns;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.mappings,
+   org.eclipse.persistence.exceptions,
+   javax.persistence,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.descriptors",
+ org.eclipse.persistence.internal.jpa.metadata.converters;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.mappings.converters,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.exceptions,
+   javax.persistence,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.mappings.foundation",
+ org.eclipse.persistence.internal.jpa.metadata.copypolicy;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.descriptors.copying,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.xml",
+ org.eclipse.persistence.internal.jpa.metadata.inheritance;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   javax.persistence",
+ org.eclipse.persistence.internal.jpa.metadata.listeners;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   javax.validation,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.indirection,
+   javax.validation.groups,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   javax.persistence",
+ org.eclipse.persistence.internal.jpa.metadata.locking;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects",
+ org.eclipse.persistence.internal.jpa.metadata.mappings;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   javax.persistence,
+   org.eclipse.persistence.mappings,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.helper",
+ org.eclipse.persistence.internal.jpa.metadata.multitenant;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.annotations,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.inheritance,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.config,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects",
+ org.eclipse.persistence.internal.jpa.metadata.partitioning;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.descriptors.partitioning,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.exceptions",
+ org.eclipse.persistence.internal.jpa.metadata.queries;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.queries,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.platform.database.oracle.plsql,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.annotations,
+   org.eclipse.persistence.platform.database.jdbc",
+ org.eclipse.persistence.internal.jpa.metadata.sequencing;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.sequencing,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.sessions,
+   javax.persistence,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.jpa.metadata.tables",
+ org.eclipse.persistence.internal.jpa.metadata.structures;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.mappings.structures,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.helper,
+   javax.persistence,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.sessions",
+ org.eclipse.persistence.internal.jpa.metadata.tables;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.tools.schemaframework,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.exceptions",
+ org.eclipse.persistence.internal.jpa.metadata.transformers;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.mappings.transformers,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.helper",
+ org.eclipse.persistence.internal.jpa.metadata.xml;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.internal.databaseaccess,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.mappings.converters,
+   org.xml.sax,
+   org.eclipse.persistence.internal.jpa.metadata.queries,
+   org.eclipse.persistence.internal.jpa.metadata,
+   org.eclipse.persistence.internal.jpa.metadata.partitioning,
+   org.eclipse.persistence.internal.jpa.metadata.sequencing,
+   org.eclipse.persistence.internal.jpa.metadata.listeners,
+   org.eclipse.persistence.internal.jpa.metadata.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.classes,
+   org.eclipse.persistence.internal.jpa.metadata.converters,
+   org.eclipse.persistence.internal.jpa.metadata.columns,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.oxm.mappings.nullpolicy,
+   org.eclipse.persistence.internal.jpa.metadata.structures,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.copypolicy,
+   org.eclipse.persistence.oxm,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.oxm.platform,
+   org.eclipse.persistence.oxm.schema,
+   org.eclipse.persistence.internal.jpa.metadata.tables,
+   org.eclipse.persistence.internal.jpa.metadata.accessors,
+   org.eclipse.persistence.internal.jpa.metadata.transformers,
+   org.eclipse.persistence.internal.jpa.metadata.locking,
+   org.eclipse.persistence.internal.jpa.metadata.cache,
+   org.eclipse.persistence.internal.jpa.metadata.inheritance,
+   org.eclipse.persistence.internal.jpa.metadata.additionalcriteria,
+   org.eclipse.persistence.oxm.mappings,
+   org.eclipse.persistence.internal.jpa.metadata.multitenant,
+   org.eclipse.persistence.internal.jpa.metadata.changetracking,
+   javax.xml.parsers,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa,
+   javax.xml.transform,
+   javax.xml.transform.stream,
+   javax.xml.validation",
+ org.eclipse.persistence.internal.jpa.metamodel;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.logging,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.descriptors,
+   javax.persistence.metamodel,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.internal.queries,
+   org.eclipse.persistence.internal.dynamic,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.mappings.foundation,
+   org.eclipse.persistence.internal.databaseaccess,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.jpa,
+   javax.persistence,
+   org.eclipse.persistence.mappings.structures",
+ org.eclipse.persistence.internal.jpa.modelgen;version="2.3.0.v20110604-r9504",
+ org.eclipse.persistence.internal.jpa.querydef;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.expressions,
+   javax.persistence.criteria,
+   javax.persistence.metamodel,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.queries,
+   org.eclipse.persistence.queries,
+   org.eclipse.persistence.internal.expressions,
+   org.eclipse.persistence.internal.jpa.metamodel,
+   javax.persistence,
+   org.eclipse.persistence.internal.security,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.internal.sessions",
+ org.eclipse.persistence.internal.jpa.transaction;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.internal.sessions,
+   javax.persistence,
+   org.eclipse.persistence.transaction,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.internal.jpa.jdbc,
+   javax.transaction,
+   javax.transaction.xa",
+ org.eclipse.persistence.internal.jpa.weaving;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.mappings,
+   org.eclipse.persistence.internal.libraries.asm,
+   org.eclipse.persistence.internal.descriptors,
+   org.eclipse.persistence.internal.jpa.metadata.accessors.objects,
+   org.eclipse.persistence.internal.libraries.asm.commons,
+   org.eclipse.persistence.internal.helper,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.sessions,
+   javax.persistence.spi,
+   org.eclipse.persistence.internal.weaving,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.indirection,
+   org.eclipse.persistence.internal.indirection,
+   org.eclipse.persistence.mappings.foundation,
+   org.eclipse.persistence.descriptors.changetracking",
+ org.eclipse.persistence.jpa;version="2.3.0.v20110604-r9504";
+  uses:="javax.persistence,
+   org.eclipse.persistence.sessions.broker,
+   org.eclipse.persistence.sessions.server,
+   org.eclipse.persistence.expressions,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.sessions,
+   org.eclipse.persistence.queries,
+   org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.sessions.factories,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.weaving,
+   org.eclipse.persistence.internal.jpa.deployment,
+   javax.persistence.spi",
+ org.eclipse.persistence.jpa.criteria;version="2.3.0.v20110604-r9504",
+ org.eclipse.persistence.jpa.dynamic;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.internal.jpa,
+   org.eclipse.persistence.internal.identitymaps,
+   org.eclipse.persistence.internal.sessions,
+   org.eclipse.persistence.descriptors,
+   org.eclipse.persistence.dynamic,
+   org.eclipse.persistence.sessions.server,
+   org.eclipse.persistence.sessions,
+   javax.persistence,
+   org.eclipse.persistence.jpa",
+ org.eclipse.persistence.jpa.metadata;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.logging,
+   org.eclipse.persistence.internal.jpa.metadata.xml,
+   org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.internal.jpa",
+ org.eclipse.persistence.jpa.metamodel;version="2.3.0.v20110604-r9504",
+ org.eclipse.persistence.jpa.spi;version="2.3.0.v20110604-r9504",
+ org.eclipse.persistence.tools.weaving.jpa;version="2.3.0.v20110604-r9504";
+  uses:="org.eclipse.persistence.exceptions,
+   org.eclipse.persistence.logging,
+   org.eclipse.persistence.internal.localization,
+   org.eclipse.persistence.internal.helper,
+   org.apache.tools.ant.types,
+   org.apache.tools.ant,
+   org.eclipse.persistence.internal.jpa.deployment,
+   org.eclipse.persistence.jpa,
+   org.eclipse.persistence.internal.jpa,
+   javax.persistence.spi,
+   org.eclipse.persistence.internal.jpa.weaving"
+Specification-Version: 2.3.0
+TSTAMP: 0005
+Specification-Vendor: Eclipse.org - EclipseLink Project
+Include-Resource: ../../about.html,../../readme.html,../../license.htm
+ l,org/eclipse/persistence/jpa=../plugins/javax.persistence/src/javax/
+ persistence,org/eclipse/persistence/jpa/eclipselink_orm_2_3.xsd=resou
+ rce/org/eclipse/persistence/jpa/eclipselink_orm_2_3.xsd,META-INF/serv
+ ices/javax.persistence.spi.PersistenceProvider=resource/META-INF/serv
+ ices/javax.persistence.spi.PersistenceProvider
+Bundle-Vendor: Eclipse.org - EclipseLink Project
+Bnd-LastModified: 1307162490558
+Bundle-Name: EclipseLink JPA
+Tool: Bnd-0.0.366
+HK2-Bundle-Name: org.eclipse.persistence:org.eclipse.persistence.jpa
+Private-Package: .
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+Implementation-Version: 2.3.0.v20110604-r9504
+Import-Package: javax.persistence;jpa="2.0";version="[1.1.0,2.1)",
+ javax.persistence.criteria;jpa="2.0";version="[1.1.0,2.1)",
+ javax.persistence.metamodel;jpa="2.0";version="[1.1.0,2.1)",
+ javax.persistence.spi;jpa="2.0";version="[1.1.0,2.1)",
+ javax.sql;resolution:=optional,
+ javax.transaction;version="1.1.0";resolution:=optional,
+ javax.transaction.xa;version="1.1.0";resolution:=optional,
+ javax.validation;resolution:=optional,
+ javax.validation.groups;resolution:=optional,
+ javax.xml.parsers;resolution:=optional,
+ javax.xml.transform;resolution:=optional,
+ javax.xml.transform.stream;resolution:=optional,
+ javax.xml.validation;resolution:=optional,
+ org.apache.tools.ant;resolution:=optional,
+ org.apache.tools.ant.types;resolution:=optional,
+ org.eclipse.persistence.annotations;version="2.3.0",
+ org.eclipse.persistence.config;version="2.3.0",
+ org.eclipse.persistence.descriptors;version="2.3.0",
+ org.eclipse.persistence.descriptors.changetracking;version="2.3.0",
+ org.eclipse.persistence.descriptors.copying;version="2.3.0",
+ org.eclipse.persistence.descriptors.invalidation;version="2.3.0",
+ org.eclipse.persistence.descriptors.partitioning;version="2.3.0",
+ org.eclipse.persistence.dynamic;version="2.3.0",
+ org.eclipse.persistence.exceptions;version="2.3.0",
+ org.eclipse.persistence.expressions;version="2.3.0",
+ org.eclipse.persistence.history;version="2.3.0",
+ org.eclipse.persistence.indirection;version="2.3.0",
+ org.eclipse.persistence.internal.databaseaccess;version="2.3.0",
+ org.eclipse.persistence.internal.descriptors;version="2.3.0",
+ org.eclipse.persistence.internal.dynamic;version="2.3.0",
+ org.eclipse.persistence.internal.expressions;version="2.3.0",
+ org.eclipse.persistence.internal.helper;version="2.3.0",
+ org.eclipse.persistence.internal.identitymaps;version="2.3.0",
+ org.eclipse.persistence.internal.indirection;version="2.3.0",
+ org.eclipse.persistence.internal.jpa.parsing;version="2.3.0",
+ org.eclipse.persistence.internal.jpa.parsing.jpql;version="2.3.0",
+ org.eclipse.persistence.internal.libraries.asm,
+ org.eclipse.persistence.internal.libraries.asm.commons,
+ org.eclipse.persistence.internal.localization;version="2.3.0",
+ org.eclipse.persistence.internal.queries;version="2.3.0",
+ org.eclipse.persistence.internal.security;version="2.3.0",
+ org.eclipse.persistence.internal.sessions;version="2.3.0",
+ org.eclipse.persistence.internal.weaving;version="2.3.0",
+ org.eclipse.persistence.logging;version="2.3.0",
+ org.eclipse.persistence.mappings;version="2.3.0",
+ org.eclipse.persistence.mappings.converters;version="2.3.0",
+ org.eclipse.persistence.mappings.foundation;version="2.3.0",
+ org.eclipse.persistence.mappings.structures;version="2.3.0",
+ org.eclipse.persistence.mappings.transformers;version="2.3.0",
+ org.eclipse.persistence.oxm;version="2.3.0",
+ org.eclipse.persistence.oxm.mappings;version="2.3.0",
+ org.eclipse.persistence.oxm.mappings.nullpolicy;version="2.3.0",
+ org.eclipse.persistence.oxm.platform;version="2.3.0",
+ org.eclipse.persistence.oxm.schema;version="2.3.0",
+ org.eclipse.persistence.platform.database;version="2.3.0",
+ org.eclipse.persistence.platform.database.converters;version="2.3.0",
+ org.eclipse.persistence.platform.database.jdbc;version="2.3.0",
+ org.eclipse.persistence.platform.database.oracle.annotations;version="2.3.0",
+ org.eclipse.persistence.platform.database.oracle.plsql;version="2.3.0",
+ org.eclipse.persistence.platform.database.partitioning;version="2.3.0",
+ org.eclipse.persistence.platform.server;version="2.3.0",
+ org.eclipse.persistence.queries;version="2.3.0",
+ org.eclipse.persistence.sequencing;version="2.3.0",
+ org.eclipse.persistence.sessions;version="2.3.0",
+ org.eclipse.persistence.sessions.broker;version="2.3.0",
+ org.eclipse.persistence.sessions.coordination;version="2.3.0",
+ org.eclipse.persistence.sessions.coordination.jms;version="2.3.0",
+ org.eclipse.persistence.sessions.coordination.rmi;version="2.3.0",
+ org.eclipse.persistence.sessions.factories;version="2.3.0",
+ org.eclipse.persistence.sessions.server;version="2.3.0",
+ org.eclipse.persistence.tools.profiler;version="2.3.0",
+ org.eclipse.persistence.tools.schemaframework;version="2.3.0",
+ org.eclipse.persistence.transaction;version="2.3.0",
+ org.w3c.dom;resolution:=optional,
+ org.xml.sax;resolution:=optional
+Bundle-ManifestVersion: 2
+DSTAMP: 20110604
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/FetchGroup
+ Metadata.class
+SHA1-Digest: pe6E6iPlPg/IF64nxyncC1Pklh0=
+
+Name: org/eclipse/persistence/jpa/PersistenceUtil.java
+SHA1-Digest: bYlNjskllucwY7na5Q0blHCLvic=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/cache/CacheInterce
+ ptorMetadata.class
+SHA1-Digest: n0RTiXklL5OECT04DbaHFxMclqQ=
+
+Name: org/eclipse/persistence/jpa/persistence_2_0.xsd
+SHA1-Digest: RfOm0oRHBFjRt3ONYtHuE68ehiE=
+
+Name: org/eclipse/persistence/jpa/criteria/From.java
+SHA1-Digest: e6klT40jXMpvpqkegdSK1SfPtAQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataConstants.
+ class
+SHA1-Digest: O7BWD0hPX4eTxPI6DNEuQc5lKnw=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/MethodWeaver.class
+SHA1-Digest: 2XOsGp7hxxDOXAc3wL+THkSomMA=
+
+Name: org/eclipse/persistence/jpa/criteria/ListJoin.java
+SHA1-Digest: aERAhKYV1NtxJDGMzogjv+TkJD8=
+
+Name: org/eclipse/persistence/jpa/OptimisticLockException.java
+SHA1-Digest: bkCX10vnsKlzWWQhT3JyIle1ovU=
+
+Name: org/eclipse/persistence/jpa/SequenceGenerator.java
+SHA1-Digest: Q7q5MBjHlZxPvyYygIChkKmcMUI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/PLSQLRecor
+ dMetadata.class
+SHA1-Digest: dtJ2iSTdvyp3G01Yw6gib9aW0ks=
+
+Name: org/eclipse/persistence/jpa/Entity.java
+SHA1-Digest: A770r5Bze2pdaMcPFADNzlbVe4I=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Tempora
+ lMetadata.class
+SHA1-Digest: +dAgufIanlAk2hxGTzYROxtWU+U=
+
+Name: org/eclipse/persistence/jpa/PessimisticLockException.java
+SHA1-Digest: yJO3myy95OkRWDUuUbcoobMRmes=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/TypeCon
+ verterMetadata.class
+SHA1-Digest: ibYadX2ViOTmxiOY7gANdPGN9q8=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Range
+ PartitionMetadata.class
+SHA1-Digest: wEgfxF/FFKtXvHoDAzRYAR+UEHs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/copypolicy/Instant
+ iationCopyPolicyMetadata.class
+SHA1-Digest: Hdptm8zHLka8OGeOlLf8l5bX4E0=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/FromImpl.class
+SHA1-Digest: FRn+RUciEf/t4ULcChUAJinGS9Q=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataLogger.cla
+ ss
+SHA1-Digest: +ehKe9/HN6AoAarURqXrv/tTdeo=
+
+Name: org/eclipse/persistence/jpa/ColumnResult.java
+SHA1-Digest: aWJK0XlezYYKLDdjhCBSSSifFo8=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/BeanValidationIn
+ itializationHelper$BeanValidationInitializationHelperImpl.class
+SHA1-Digest: xpRdQR3VYQnRgJnzCLvYjrewILM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedPLSQL
+ StoredFunctionQueryMetadata.class
+SHA1-Digest: /WFSEV95lY87iiBkbzNB2ydW3RQ=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Partition
+ ingHint.class
+SHA1-Digest: hkHOMJBMiJ0pSk7m3+jzj/ZsfCQ=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/xml/parser/XMLEx
+ ceptionHandler.class
+SHA1-Digest: SFCRiIOvH1mU433pKnzu3uG0q1g=
+
+Name: org/eclipse/persistence/jpa/JpaEntityManagerFactory.class
+SHA1-Digest: LyragI1f+1lqnx7IklGYBya98bQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/mappings/ReturnIns
+ ertMetadata.class
+SHA1-Digest: WfETZUxa56SHgByaATU5fyRUMXU=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/xml/parser/XMLNo
+ deList.class
+SHA1-Digest: iVCsCLfk7Vp7zlYo5Ysh0w09qgs=
+
+Name: org/eclipse/persistence/jpa/Embeddable.java
+SHA1-Digest: r7eXspGVIaU9uZ8XCGlvyopRpA4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory$MetadataFieldVisitor.class
+SHA1-Digest: Rx1OnYZso2HbiLg2jBSzFpfOvkQ=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$HintHint.
+ class
+SHA1-Digest: u5eFdnVzcG13SOfzMBIZEG494kQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /ObjectAccessor.class
+SHA1-Digest: d05OCA4tbKfo4yFg2opydpJTr+w=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/CollectionAttribu
+ teImpl.class
+SHA1-Digest: 41++J8JJGQXP5stJAlgt+7+9Ah4=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerFactoryProvide
+ r.class
+SHA1-Digest: OMV0SayY/ws7jPgjcmKqqaGFBkc=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JavaSECMPInitial
+ izer$TempEntityLoader.class
+SHA1-Digest: f1HZG3phRacx1Ex//diPWJE9e7Q=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$LeftFetch
+ Hint.class
+SHA1-Digest: s5LP6Yhu5CxWX7gmb27QPy/ikCI=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$AsOfSCNHi
+ nt.class
+SHA1-Digest: f0u/1s2OcIA0bdwZuKA8hRuOWM0=
+
+Name: org/eclipse/persistence/jpa/metadata/MetadataSourceAdapter.class
+SHA1-Digest: eqU54yb+uaxC4HDd/58lHmMy6e8=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/BeanValidationIn
+ itializationHelper.class
+SHA1-Digest: +c1cTMUVdVAZ65UIG7nzCdIGQVE=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$5.class
+SHA1-Digest: 3KTpRnOFV/tjeOwlN2hODm/7VYw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedStore
+ dFunctionQueryMetadata.class
+SHA1-Digest: CV5toJHnUR5wlq5zMQxWyBec42E=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedNativ
+ eQueryMetadata.class
+SHA1-Digest: 2uR5bVmbVG7QEIRHAW1FZXgu7qg=
+
+Name: org/eclipse/persistence/jpa/Table.java
+SHA1-Digest: JIqIS7UJAEJpun0O9xz8mdEHe78=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /CollectionAccessor.class
+SHA1-Digest: dIG2tL2hPLsqmfjYjsSiXkRhoc0=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$11.clas
+ s
+SHA1-Digest: VD3kSurpPfnE8lGjpoJP/wpiyUw=
+
+Name: org/eclipse/persistence/jpa/metadata/MetadataSource.class
+SHA1-Digest: XiFnDFwDghENN4itme3Lc73EYC8=
+
+Name: org/eclipse/persistence/jpa/EntityManager.java
+SHA1-Digest: H/aNq9O4yBtVTufijBY9MKmZv1Y=
+
+Name: org/eclipse/persistence/internal/jpa/jdbc/DataSourceImpl.class
+SHA1-Digest: iB/p8MNnccC18VhhxpuMPWZPO60=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$JDBCFirst
+ ResultHint.class
+SHA1-Digest: 871grnhaaRhQQvns0gc8hmK2bns=
+
+Name: org/eclipse/persistence/jpa/OrderColumn.java
+SHA1-Digest: fnnRYEw57YGfWiKy04kQJS+19OI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Pinne
+ dPartitioningMetadata.class
+SHA1-Digest: ESMEMzVex5Nv/QfYTGTEJMq2bck=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Repli
+ cationPartitioningMetadata.class
+SHA1-Digest: rIDT6BPaO+yqM7l0FTFAWY1ArwM=
+
+Name: org/eclipse/persistence/jpa/TransactionRequiredException.java
+SHA1-Digest: QqOWldjDJtuk09ZSuRZmSe0j8ck=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /OneToManyAccessor.class
+SHA1-Digest: N5bDHv79zGxV4YCn3VBZN5gG1Pc=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/IdentifiableTypeI
+ mpl.class
+SHA1-Digest: rKhZqfeoyPs1S4eyGXtqE0/f3lA=
+
+Name: org/eclipse/persistence/internal/jpa/StaticWeaveInfo.class
+SHA1-Digest: M78SoeWVHOG2Inl5vwNNdMi71d4=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$PropertyP
+ rocessor.class
+SHA1-Digest: je0U32ViMQytj/lKYYNZxTmX6TE=
+
+Name: org/eclipse/persistence/jpa/criteria/Subquery.java
+SHA1-Digest: C+nsj/FoMWDw7I2Iq2+/g+pcN4g=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl.class
+SHA1-Digest: kw9vSTbZn2JBR+Dtq+ZKX9bni7E=
+
+Name: org/eclipse/persistence/jpa/criteria/Path.java
+SHA1-Digest: HOxnHdDERY8rfm72ZHzqA5FVSCw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/structures/Structu
+ reAccessor.class
+SHA1-Digest: gboOKzLHzYrDaQR4Fx0JC66XrO0=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CriteriaBuilderImp
+ l.class
+SHA1-Digest: vcXLdjBwpeLnWT04Tl6CtpX1NNM=
+
+Name: org/eclipse/persistence/internal/jpa/EJBQueryImpl.class
+SHA1-Digest: Cy6x8zK2M4MVgJZJvp9pJzNZoHM=
+
+Name: org/eclipse/persistence/jpa/JoinColumn.java
+SHA1-Digest: T1CAA9W4aU3YOHYCAEpqmJKX1CI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/TableMetada
+ ta.class
+SHA1-Digest: Hh9bDVmGmPOZsp8o5OTS2droW3s=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/PLSQLTable
+ Metadata.class
+SHA1-Digest: q9Q7bhGX7ul3DrkXLmoOAnqxCsc=
+
+Name: org/eclipse/persistence/jpa/SqlResultSetMappings.java
+SHA1-Digest: 8Gpfp/JN2s2aqu0CrFJx+8ifr3M=
+
+Name: org/eclipse/persistence/jpa/OrderBy.java
+SHA1-Digest: 0R+2O1Y+eYe4r4m/nAybEsYTN6w=
+
+Name: org/eclipse/persistence/jpa/Column.java
+SHA1-Digest: PwiGM3Y6U7tNcf0mp9yVhTSzAN4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/Discrimina
+ torClassMetadata.class
+SHA1-Digest: PrlOT35H8DuNYdkwKGE10oQu/8o=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /TransformationAccessor.class
+SHA1-Digest: +znQBjp7yW+Q7ActvdEDQdEfFio=
+
+Name: org/eclipse/persistence/jpa/PersistenceContext.java
+SHA1-Digest: 8o7hTDb3WM8ozPemZjwdBW6PTKc=
+
+Name: org/eclipse/persistence/jpa/AttributeOverrides.java
+SHA1-Digest: vtozUjwm3bO+y93Sp31vtnDj3VM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Scrollabl
+ eCursorHint.class
+SHA1-Digest: lo+2NrpVgVzi2kfuNkoq1PEqNxE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedPLSQL
+ StoredProcedureQueryMetadata.class
+SHA1-Digest: UyYhSmDknMJx9vDBksBl5VI5XpM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Composite
+ MemberHint.class
+SHA1-Digest: ECGbqN2w9qXtOmR6s9nSeoj20cA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Field
+ PartitioningMetadata.class
+SHA1-Digest: 066oFTmbp085zoDP9FB9GQx8JRQ=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/BasicMapJoinImpl.c
+ lass
+SHA1-Digest: aBlJ7OsYPYed3iYi45E6tEnpwS0=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/SetAttributeImpl.
+ class
+SHA1-Digest: sBCxQvCrFILGZ3FdKY9jn762L+E=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/DirectoryArchive
+ $1.class
+SHA1-Digest: tvBymTjeImUsffx/URBYtE+SJOs=
+
+Name: org/eclipse/persistence/jpa/spi/PersistenceProviderResolver.java
+SHA1-Digest: tHtlczhxCnAvjHynhJeIFzh26wk=
+
+Name: org/eclipse/persistence/jpa/MapKeyTemporal.java
+SHA1-Digest: V96VhsupSFnbxLZn+UChS6oiT5E=
+
+Name: org/eclipse/persistence/jpa/MapKey.java
+SHA1-Digest: FUX1hHbBe+HOFG16ILOa5ypGgFQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/sequencing/Sequenc
+ eGeneratorMetadata.class
+SHA1-Digest: 2hCTGyGHGiMcXUrVwtYLtyyWdTo=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/xml/parser/XPath
+ Engine.class
+SHA1-Digest: ZlMQhP9DDanivmxDy0lRIURGJwE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/HashP
+ artitioningMetadata.class
+SHA1-Digest: pIwwAIeVBrs8z1GmhwLI4JVfcfI=
+
+Name: org/eclipse/persistence/jpa/ManyToOne.java
+SHA1-Digest: 1iPFtKWOumgaKEnL+mUEBidRo7w=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/ColumnMeta
+ data.class
+SHA1-Digest: Jm4OAFjiXAXLsYyaDWfiI/aOVHQ=
+
+Name: org/eclipse/persistence/jpa/criteria/Expression.java
+SHA1-Digest: IHS+8OYkvLVGmAsreSlDCBjni5U=
+
+Name: org/eclipse/persistence/jpa/Tuple.java
+SHA1-Digest: cmDfXrrz6tbTsioz+cOg/rJSc8k=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ ClassAccessor.class
+SHA1-Digest: HiEdyC7aG4vEThtUkUk+M9jYuEs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/ObjectT
+ ypeConverterMetadata.class
+SHA1-Digest: JL/LoKDxTviM/bVBBYgdS6H2HXo=
+
+Name: org/eclipse/persistence/jpa/PersistenceContexts.java
+SHA1-Digest: RlvEnFPbfu4FQR2gqNdvSxSw1oI=
+
+Name: org/eclipse/persistence/internal/jpa/CacheImpl.class
+SHA1-Digest: wKv9qQsG35t+CXdmtTP7z/iX/jA=
+
+Name: org/eclipse/persistence/internal/jpa/CMP3Policy$FieldAccessor.cl
+ ass
+SHA1-Digest: mZRh+x3V9IxfZ2wMcbaNkf/QpOo=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/BeanVali
+ dationListener$AutomaticLifeCycleValidationTraversableResolver.class
+SHA1-Digest: NrGLMjtFSxTMTPQVEC1YvLAW/jA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /ManyToOneAccessor.class
+SHA1-Digest: LEV8AsIvTbddN4aCludRfId0yz8=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/BeanVali
+ dationListener.class
+SHA1-Digest: exiYL1f+hWKgL+oOsQ+e8enbyH4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /MappingAccessor.class
+SHA1-Digest: sD/UQv11oTlbqkzmGo/gtTeoJuE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/PLSQLCompl
+ exTypeMetadata.class
+SHA1-Digest: q9T40HbnafhyUyvJvLr5PwXZVRc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataField.class
+SHA1-Digest: dhZe28Gn+gyPqZUMWC6/gCZsAs4=
+
+Name: org/eclipse/persistence/jpa/PessimisticLockScope.java
+SHA1-Digest: ue2/qZOw4YCF90khqJ8iW0ssPtg=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/PersistenceUnitP
+ rocessor$Mode.class
+SHA1-Digest: r8hZ7ZXxzMsX27HS2xeXoCbjDwE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory$MetadataMethodVisitor.class
+SHA1-Digest: PcunfUKgJi1IKNe1sW9XTZkZPZU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/PrimaryKey
+ JoinColumnMetadata.class
+SHA1-Digest: YHBSSJFQEtALXoBJk2Lw47H4DXY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataDescriptor
+ .class
+SHA1-Digest: FbP4t5h6xO7k12pzO+1BgFxPBZU=
+
+Name: org/eclipse/persistence/jpa/persistence_1_0.xsd
+SHA1-Digest: wD354lhLF1kcSWNDaL5ykQe3oZE=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/DirectoryArchive
+ .class
+SHA1-Digest: 65N2a8yCXWLO9h8AbpkeFeuJBRI=
+
+Name: org/eclipse/persistence/jpa/PersistenceUnits.java
+SHA1-Digest: F9JFxsWkjsSjdHhi+XD0RCSIRTU=
+
+Name: org/eclipse/persistence/jpa/metamodel/BasicType.java
+SHA1-Digest: VFavF7ORrNh1SwXFHpro7Yo9jbw=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eHint.class
+SHA1-Digest: BuhkgxjHyOkzwoefF+TZaeuU7nE=
+
+Name: org/eclipse/persistence/jpa/criteria/CollectionJoin.java
+SHA1-Digest: 6SKr0LxvTAbcn66A2hh76Bo7twY=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerFactoryDelegat
+ e.class
+SHA1-Digest: 36rYuwVY/dkEsdsNsFBdquO5Lr4=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$JDBCMaxRo
+ wsHint.class
+SHA1-Digest: 0+MbMIPn3rkW3FunWL+MVPC8FjI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLEntityMappi
+ ngs.class
+SHA1-Digest: +TemkvMW+zFPb3GcsB0ur/PT/VU=
+
+Name: org/eclipse/persistence/jpa/CollectionTable.java
+SHA1-Digest: FsNptgLBhV3FyEK+d27RPbUDbgI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/ORMetadata.class
+SHA1-Digest: aoxlkE7K+VwEkAsxjCFCfDyh6Ic=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/TupleQuery.class
+SHA1-Digest: xoXgH9lC0NS6rE4BMqOkDGgG7n8=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$AsOfHint.
+ class
+SHA1-Digest: 4aUBEm814dSYMnQbtygT0UafSbM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Indirecti
+ onPolicyHint.class
+SHA1-Digest: ftUWRkdGFD/dVQFl70cWf5vjdYQ=
+
+Name: org/eclipse/persistence/jpa/ValidationMode.java
+SHA1-Digest: FX9pnenXneXQXuFLLg6pfSfD07o=
+
+Name: org/eclipse/persistence/jpa/EnumType.java
+SHA1-Digest: FmYvJGDH/MrMTkvSCzxplug73F0=
+
+Name: org/eclipse/persistence/jpa/spi/PersistenceUnitTransactionType.j
+ ava
+SHA1-Digest: R28Sh03cyP9pXXakFevC6fAegqM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/StructC
+ onverterMetadata.class
+SHA1-Digest: R982h8IAjjh4lHhc+8fVTH64/P0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/EmptyElementCo
+ nverter.class
+SHA1-Digest: RgRTP2S3Xn/nUFDAlCnveI/krCM=
+
+Name: org/eclipse/persistence/jpa/CacheRetrieveMode.java
+SHA1-Digest: 7qFf8K4fT9EA9IX6Co7fNUtV6BA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/cache/TimeOfDayMet
+ adata.class
+SHA1-Digest: A/E8VgA3wMV5FvHCtcFu6PUCaHU=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/AbstractQueryImpl$
+ ResultType.class
+SHA1-Digest: oY2biAa3YT6q3dKtq/Ej+GBmZXw=
+
+Name: org/eclipse/persistence/jpa/PersistenceContextType.java
+SHA1-Digest: ldebCdcpmY9/FPQuGlPRl5A0j2w=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/BasicCollectionJoi
+ nImpl.class
+SHA1-Digest: bghXQ+KNlabMFMNixQZhGkal0rk=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CriteriaBuilderImp
+ l$CaseImpl.class
+SHA1-Digest: Q1GSz55fv2n/pHrqM/stH6hl6M0=
+
+Name: org/eclipse/persistence/jpa/ExcludeSuperclassListeners.java
+SHA1-Digest: UuShm8ADEDcW6WG6THH0fD2zU4E=
+
+Name: org/eclipse/persistence/jpa/criteria/JoinType.java
+SHA1-Digest: s/qyPtW2dMVE8bfC7gQ7VmD48k8=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/TransactionWrap
+ per.class
+SHA1-Digest: aeh905oL1qmVk/yVX0HeH47gUNo=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/EntityTransacti
+ onWrapper.class
+SHA1-Digest: WQFMvbitL8oXBVMEQKb4XCEsFb8=
+
+Name: org/eclipse/persistence/jpa/JpaHelper.class
+SHA1-Digest: KTJpPIyAkXEuecF0iH7FBTWv7Ag=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheStat
+ ementHint.class
+SHA1-Digest: TGYwAz7v5M3z0xTXiGmanqX3fFc=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$NativeCon
+ nectionHint.class
+SHA1-Digest: RJU0DLqHPaSs64KUJHMLqq29N7M=
+
+Name: org/eclipse/persistence/jpa/criteria/CompoundSelection.java
+SHA1-Digest: VSUr4L6E3mokZe5Bch/65N/RizU=
+
+Name: org/eclipse/persistence/jpa/criteria/CriteriaBuilder.java
+SHA1-Digest: x+8A+3HTAwYpldaQg3q1beevoqs=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$4.class
+SHA1-Digest: 2c0IT9ooou8fmSFVMcgaDEscLvM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataProcessor.
+ class
+SHA1-Digest: Hzkz3jNa8dNSWuf/q8MDRof8KpE=
+
+Name: org/eclipse/persistence/jpa/PrimaryKeyJoinColumns.java
+SHA1-Digest: T8XfnMjgJD/IRNrfhZS/tzbvcvM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$PrepareHi
+ nt.class
+SHA1-Digest: dIHDWFKVHSTwIZE6BZ2NnkvD9n8=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/BasicSetJoinImpl.c
+ lass
+SHA1-Digest: ybJcNOOSWIidKyyJ7d5jCpWWZTo=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$10.clas
+ s
+SHA1-Digest: hS1YOZ7FiWALHVb+FwwRMnM7HoA=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CollectionJoinImpl
+ .class
+SHA1-Digest: NreoDOisk28fbjadkRuoghpemnM=
+
+Name: org/eclipse/persistence/tools/weaving/jpa/StaticWeaveProcessor.c
+ lass
+SHA1-Digest: qEoQ5c6jXPt0wtXm61xjBHe2/kA=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/BasicTypeImpl.cla
+ ss
+SHA1-Digest: 7no+ak5ILkcHF6uW9aLYo51A85s=
+
+Name: org/eclipse/persistence/jpa/Cache.java
+SHA1-Digest: ZTZEEE9MPhYV/IAMClHb0BjWpo4=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CriteriaBuilderImp
+ l$CoalesceImpl.class
+SHA1-Digest: PoIfXju+tpJq+tGRzyTkVBfT+SQ=
+
+Name: org/eclipse/persistence/jpa/metamodel/SingularAttribute.java
+SHA1-Digest: dMr7f7q9uxvRPxBlViC6ledI4X4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/copypolicy/CloneCo
+ pyPolicyMetadata.class
+SHA1-Digest: a+vI/JZJcsDGHXzSX4FKXBEwq84=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /ManyToManyAccessor.class
+SHA1-Digest: baua7YEGAqAusucQeuHtdmuSueo=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/UniqueConst
+ raintMetadata.class
+SHA1-Digest: hlapdgDJXN2iIKDwCN0VeMJGZhQ=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/ArchiveBase.clas
+ s
+SHA1-Digest: EyCLyPoTwp1mDyl91TCenrhP6ow=
+
+Name: org/eclipse/persistence/jpa/GeneratedValue.java
+SHA1-Digest: ItyOccAB2vW7dyt2Dg/T9+k+i74=
+
+Name: license.html
+SHA1-Digest: EQYcC4FF34XyzwwZy/Zdhq9gb/0=
+
+Name: org/eclipse/persistence/jpa/spi/PersistenceUnitInfo.java
+SHA1-Digest: 1EYimAeC27mGQSylnShx6wD/Lrc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Convert
+ erMetadata.class
+SHA1-Digest: sBRift4jif4DfxlvaIohosxcq3g=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/CollectionT
+ ableMetadata.class
+SHA1-Digest: QpQwkUP/XI8hN2v4ffq/jDiJ994=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/EntityResu
+ ltMetadata.class
+SHA1-Digest: wSqKYXxxqobW/nl8mb/pAkCLElY=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchGrou
+ pNameHint.class
+SHA1-Digest: 8jUuFeyXg2LntpGGXPULjLn7oPw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/EntityCl
+ assListener.class
+SHA1-Digest: dFaX4ECjvmA6H4HgJjw0KU72r+w=
+
+Name: org/eclipse/persistence/jpa/SharedCacheMode.java
+SHA1-Digest: Lbcq07LA4szpaQ3yeApjH7kmDeA=
+
+Name: org/eclipse/persistence/jpa/Lob.java
+SHA1-Digest: MaKfLAF2p5oTeCr51arFzzcH55U=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/xml/parser/Persi
+ stenceContentHandler.class
+SHA1-Digest: jk96KmF0/jHql7+EJl3DbJaRfzo=
+
+Name: org/eclipse/persistence/jpa/ArchiveFactory.class
+SHA1-Digest: 1EGRETB9otJ/9U6w+I2lanNjkm8=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/TransactionMana
+ gerImpl.class
+SHA1-Digest: vhWXOtDpfGBPcW7ihLjw27BsfDo=
+
+Name: org/eclipse/persistence/jpa/SecondaryTables.java
+SHA1-Digest: rGvMe0NN9Kf4IVuezhMM7Ashewc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/sequencing/Generat
+ edValueMetadata.class
+SHA1-Digest: PWm+CtlhU5m9yysb66/Tmo/Kqws=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$9.class
+SHA1-Digest: zoxMPPehfU6e2/EKyVICc5uaF2o=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/EntityCl
+ assListenerMetadata.class
+SHA1-Digest: 0aIb/H6xc42/Ce7FqFFAtaY6AgA=
+
+Name: org/eclipse/persistence/jpa/DiscriminatorColumn.java
+SHA1-Digest: +d+Qt7g5kTFyLU0ZfdZiVbSvL6k=
+
+Name: org/eclipse/persistence/jpa/metamodel/Bindable.java
+SHA1-Digest: tZeVOfNNkqJhcEuK6YozXIJj+O4=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/MapAttributeImpl.
+ class
+SHA1-Digest: yLwFb0qE1/cmTVYLTgi2cRSDYbA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/LobMeta
+ data.class
+SHA1-Digest: rmRnnvj74l82RztX+xDj1CSQpns=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/StaticWeaveJAROutpu
+ tHandler.class
+SHA1-Digest: McRLnhJd3VwdhvXc1WoKDl97AtQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory.class
+SHA1-Digest: K6bmgCy07WgbcTx2aP2/C8xLaKo=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/transformers/ReadT
+ ransformerMetadata.class
+SHA1-Digest: z6qvJz0dS4xM6qmWNEG1WALrMAg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/JoinColumn
+ Metadata.class
+SHA1-Digest: bnUqWkqlM3XFNUQHqH665jRQEws=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CursorSiz
+ eHint.class
+SHA1-Digest: NKPDlScewixXMxaOyukLkGK8Gcc=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Pessimist
+ icLockScope.class
+SHA1-Digest: 1s4lDn/GSqXaz0oHi1E+4U8BOk0=
+
+Name: about.html
+SHA1-Digest: 0riOTeIoEg623/aouFLauqQDe+8=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Value
+ PartitionMetadata.class
+SHA1-Digest: kIcE4IVg63b0BhAnHFCoeTjnUl0=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/InternalExpression
+ .class
+SHA1-Digest: M+6OxvGpct+Wm+d3n03qWciYefM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/JoinTableMe
+ tadata.class
+SHA1-Digest: iHQpmz8lnRzcOKA+2kNgZEo6o5g=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheRetr
+ ieveModeHint.class
+SHA1-Digest: ILWzxTu9O7Gq3sOo+q9gQvNGYGc=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/TypeImpl.class
+SHA1-Digest: pgOTyeyQ6O+jsOofc8CTqv0nSGk=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/Associatio
+ nOverrideMetadata.class
+SHA1-Digest: yor4zs5W+GMW5df7viNVSsmTVXU=
+
+Name: org/eclipse/persistence/jpa/EntityResult.java
+SHA1-Digest: 2k04ANXtNySJYkMLspFmpQSf2+A=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLPersistence
+ UnitMetadata.class
+SHA1-Digest: ImrZznTv6hZiVtyUbf6X4NzQqZI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /DerivedIdClassAccessor.class
+SHA1-Digest: WY7L9KAabKGQ6k1Zp0BcKCGi2f8=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1.class
+SHA1-Digest: 5VwAJslx1V84hMhRzRy9HIjkr3k=
+
+Name: org/eclipse/persistence/internal/jpa/PersistenceInitializationAc
+ tivator.class
+SHA1-Digest: IsUJ0+l5deNPNqHi0TMiZgOxXeo=
+
+Name: org/eclipse/persistence/jpa/DiscriminatorValue.java
+SHA1-Digest: Q0AtUgq8A0qrtDievzCb0qLfaNo=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$MaintainC
+ acheHint.class
+SHA1-Digest: 6KjuZiTFpxYiU/s/qwBdA4s9b2s=
+
+Name: org/eclipse/persistence/internal/jpa/ExceptionFactory.class
+SHA1-Digest: lrcTsUKOmduwdXbKAdpTcgAFfAU=
+
+Name: org/eclipse/persistence/internal/jpa/CMP3Policy$PropertyAccessor
+ .class
+SHA1-Digest: EwtgAEv3vQ/0nvhzu6Ynx97gC/Q=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/FieldResul
+ tMetadata.class
+SHA1-Digest: kUAl6iiiOLOU2Fw9f1vOtl1sgrs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/additionalcriteria
+ /AdditionalCriteriaMetadata.class
+SHA1-Digest: b70tSGWbeqf5VhiTfNxO2kpXW1o=
+
+Name: org/eclipse/persistence/jpa/Cacheable.java
+SHA1-Digest: kP8U3GI5A2duvBIcMz6n89fDhu8=
+
+Name: org/eclipse/persistence/jpa/NamedQueries.java
+SHA1-Digest: uBF6X1LGXeJmzyaia7etcmtdP+M=
+
+Name: org/eclipse/persistence/jpa/metamodel/EmbeddableType.java
+SHA1-Digest: xVnv695X49+Ud+7dxqJuzwbaAuY=
+
+Name: org/eclipse/persistence/jpa/SqlResultSetMapping.java
+SHA1-Digest: Acd1lcGVg1Lb+PRwn97wVxxPF0s=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/AttributeO
+ verrideMetadata.class
+SHA1-Digest: Y+UqC9hIfoqUdDMdMPm4Qe+0W8o=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/sequencing/TableGe
+ neratorMetadata.class
+SHA1-Digest: /8psaNbxCUUf5W3NUqqjwoyS/Ok=
+
+Name: org/eclipse/persistence/jpa/PostPersist.java
+SHA1-Digest: gLdNEKhMpG4kwX3Ilcwx8DwzUKQ=
+
+Name: org/eclipse/persistence/jpa/TableGenerator.java
+SHA1-Digest: AgiQj90ZH1xJT2jF7JmsV3Fretk=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /BasicAccessor.class
+SHA1-Digest: Eg7hhbOUM/+ljTIMymVOilLUqxU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Convers
+ ionValueMetadata.class
+SHA1-Digest: V6sMiIqr9zMOyBnvYfNyj9PkYKY=
+
+Name: org/eclipse/persistence/jpa/CacheStoreMode.java
+SHA1-Digest: RRED0Lr13YlIIDf80UWkIW3AMJQ=
+
+Name: org/eclipse/persistence/jpa/AccessType.java
+SHA1-Digest: 2NAVWhwylqoiUGatXIB/m4QS1Z8=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CompoundExpression
+ Impl.class
+SHA1-Digest: 4thXGAn4r4J6KMa5he3wccBXnBg=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/ParameterExpressio
+ nImpl.class
+SHA1-Digest: QmlteYJ4iq9PjLjLzVyS3j8cQeE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLEntityMappi
+ ngsMappingProject.class
+SHA1-Digest: qc7Sv2ENAKD4680tSEuZg0IQ4JE=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/ClassWeaver.class
+SHA1-Digest: oGlwY0SRBNtZleyugCm/laTt+uc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/SecondaryTa
+ bleMetadata.class
+SHA1-Digest: AiCMrEx56bRITio8vV0AMz/h3Wo=
+
+Name: org/eclipse/persistence/jpa/JoinTable.java
+SHA1-Digest: 9tCs3vGU+el9kRCtyF+cjd3X7P4=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/JoinImpl.class
+SHA1-Digest: 1PPAlMKLMrGiGtJWH1OcKgvlXUU=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$BatchType
+ Hint.class
+SHA1-Digest: ZeHbB5Um2/l4ML7pY9x1KiXbcIQ=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/SEPersistenceUni
+ tProperty.class
+SHA1-Digest: ib0qt5RtGvynhWbJa4dECAWYzqc=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$BatchSize
+ Hint.class
+SHA1-Digest: gCbk+8/LfnaaOhMPWz/lwDbYFTY=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchGrou
+ pDefaultHint.class
+SHA1-Digest: csqyUDT21WRTxkOoyG6MpVHGWnU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Abstr
+ actPartitioningMetadata.class
+SHA1-Digest: x0eFN5SyMllUtuqGjDvkl4+ebNc=
+
+Name: org/eclipse/persistence/jpa/PostUpdate.java
+SHA1-Digest: 2Cf5WFpxJsVd2643QaA2Rhf5OiY=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Redirecto
+ rHint.class
+SHA1-Digest: o6IWwLmT/abyDmpEg3Coq9TUCQ8=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/EntityTypeImpl.cl
+ ass
+SHA1-Digest: mmalasb7RAbesOw2BBTd46Ueavw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/MetadataHe
+ lper.class
+SHA1-Digest: NkYjGTnxxepVu5hfmV9uo4EODyg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Abstrac
+ tConverterMetadata.class
+SHA1-Digest: SPL8SnBI0KCAR6dryOqvm35kmO0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/StoredProc
+ edureParameterMetadata.class
+SHA1-Digest: DtKajhN0fb4RwuvNdgkEYx9apSY=
+
+Name: org/eclipse/persistence/jpa/NamedNativeQueries.java
+SHA1-Digest: hM0pLiNXkyHcU0E7axdUHFiRRVg=
+
+Name: org/eclipse/persistence/jpa/criteria/FetchParent.java
+SHA1-Digest: c7jMaLvisru3gbIIO7+AomBhkq0=
+
+Name: org/eclipse/persistence/jpa/TupleElement.java
+SHA1-Digest: VO6dQWa789LIzKPAit/MAXQcYm8=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /EmbeddedAccessor.class
+SHA1-Digest: hVvXK6z8VJIofyWbbIhGUVkM00I=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchGrou
+ pAttributeHint.class
+SHA1-Digest: lDy3ta8tvvbukD5qtCkvuyE2Pwo=
+
+Name: org/eclipse/persistence/jpa/JpaCache.class
+SHA1-Digest: rXBhhhIKtUxS2imKvyAornYe7xE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/SQLResultS
+ etMappingMetadata.class
+SHA1-Digest: G6FGvhv5/98lnUPqMsxCg2dbYbQ=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$3.class
+SHA1-Digest: pihrYHNW26ZZod8zCw859VycHmA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/MetadataHe
+ lper.class
+SHA1-Digest: ZpjvO8+OApfo3iPSif0kY6YkPBM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/Property
+ Metadata.class
+SHA1-Digest: AXDeWTEYpvcnTdB76g1gKoXArnk=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$ReadOnlyH
+ int.class
+SHA1-Digest: mWMgrkoDqu14+ejfBMLK5EglFro=
+
+Name: org/eclipse/persistence/jpa/criteria/Root.java
+SHA1-Digest: 7/QL76ERBAxcvmxlQDjQpaFFOUE=
+
+Name: org/eclipse/persistence/jpa/Archive.class
+SHA1-Digest: cLHXskGosWxPHOA/OYVUlxgmjuU=
+
+Name: org/eclipse/persistence/internal/jpa/modelgen/CanonicalModelProp
+ erties.class
+SHA1-Digest: NclPlPKahwUTB36iz4SxgWUgoEU=
+
+Name: org/eclipse/persistence/jpa/QueryHint.java
+SHA1-Digest: x88XpEenYrVp61XlzCD+zXzHmRw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/structures/ArrayAc
+ cessor.class
+SHA1-Digest: duww8lKWVhUbAujBZWerqoq+O+4=
+
+Name: org/eclipse/persistence/jpa/TypedQuery.java
+SHA1-Digest: WXUFRV4kLGbXN+R25dol533E+iU=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eExpiryTimeOfDayHint.class
+SHA1-Digest: YTs0CIDGCf+FlbQH18qtiP+l57U=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheStor
+ eModeLegacyHint.class
+SHA1-Digest: 0Q/ShcU3gsnwU5qjlmf6xA+Dg3s=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchGrou
+ pLoadHint.class
+SHA1-Digest: zhgMdofB/5b0yRY4ixk0dTRr80w=
+
+Name: org/eclipse/persistence/jpa/Parameter.java
+SHA1-Digest: SFn0646+IMjgtvi2GsNX6I90OHU=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/MetamodelImpl.cla
+ ss
+SHA1-Digest: zUHLyKKAPxL1hrzEATfgrG0oy/I=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/SubQueryImpl.class
+SHA1-Digest: 49jqJ9VuZMeX3ApomL6ASYDyopA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /DirectCollectionAccessor.class
+SHA1-Digest: AciF397w9IAmsIxm88cvAX1OGBE=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Inheritan
+ ceJoinHint.class
+SHA1-Digest: SPzqMgVOrjTDz/TVMkJUsbK4gbE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedStore
+ dProcedureQueryMetadata.class
+SHA1-Digest: sBc5JMb0BOqBGWjIVUfY0KwqzpM=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CriteriaQueryImpl.
+ class
+SHA1-Digest: zBmCtIBytJkhboAypVBmBMxOzis=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Pessimist
+ icLockHint.class
+SHA1-Digest: DF+8Us2eEOg+EQsRZ2nz1F7HFIw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAccessibleObject.class
+SHA1-Digest: N89k0eJk+V0TWNgjyKmBGijZ3YU=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$ResultTyp
+ eHint.class
+SHA1-Digest: 4OCPYaS70A1hMovSM46YevVSMIc=
+
+Name: org/eclipse/persistence/jpa/NamedQuery.java
+SHA1-Digest: hesktikRFURGAsno/ad9CPv7p3o=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$RefreshHi
+ nt.class
+SHA1-Digest: wUlm+4Wnt066SHH7VOl1U/gnjFg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/copypolicy/CopyPol
+ icyMetadata.class
+SHA1-Digest: z+qYgmz39njgoWEfp1Q0KNeABu0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Parti
+ tioningMetadata.class
+SHA1-Digest: fXUAEigk3NdQQMFdoj7WCDX2U6A=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$Operation
+ Type.class
+SHA1-Digest: q+/7rzShYfKFLl4aQfygVyVVoZo=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/PredicateImpl.clas
+ s
+SHA1-Digest: ZmehtyTDM8k0HoqaAb0DEdCZpAI=
+
+Name: org/eclipse/persistence/jpa/PostLoad.java
+SHA1-Digest: mYJlehQ5hAXs2aVKLr6q9/nmlTY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/multitenant/Multit
+ enantMetadata.class
+SHA1-Digest: DyGcnr3duO8+GHjo7bNKapxQ9v4=
+
+Name: org/eclipse/persistence/jpa/Temporal.java
+SHA1-Digest: 5ezYKNCVdQSZAtbjpmdA1zVS4C4=
+
+Name: org/eclipse/persistence/jpa/RollbackException.java
+SHA1-Digest: CWMVo6WYbDl1K2cm4d5Jv7vXv18=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Metadat
+ aConverter.class
+SHA1-Digest: rD2puu3yOC26B2vdrxOEuk0NsIY=
+
+Name: org/eclipse/persistence/jpa/criteria/CriteriaQuery.java
+SHA1-Digest: KrR135PKf0lGgxOEhVGfs1dg+10=
+
+Name: org/eclipse/persistence/tools/weaving/jpa/StaticWeave.class
+SHA1-Digest: /MnpnNJGkXipfGnwu+KKWKR/eHM=
+
+Name: org/eclipse/persistence/jpa/InheritanceType.java
+SHA1-Digest: Dvl1ZSDxStKwtTtlIM+G3Ufqw1s=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CriteriaBuilderImp
+ l$SimpleCaseImpl.class
+SHA1-Digest: 4hYSn0Z2EgeH8KzlM8kgcVLRKsQ=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CursorHin
+ t.class
+SHA1-Digest: bzWtn75AOZG/Z8Z+OiTLjuON3SM=
+
+Name: META-INF/services/javax.persistence.spi.PersistenceProvider
+SHA1-Digest: wD+exU00UXDYk00o+m5uHcNbTWc=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$8.class
+SHA1-Digest: 3FNAhn+IQU9efLilAMHjLBnjGOo=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/TenantDisc
+ riminatorColumnMetadata.class
+SHA1-Digest: O4sP37lfb6o/1EceTc3POqzOrsA=
+
+Name: org/eclipse/persistence/jpa/PersistenceProperty.java
+SHA1-Digest: 4aEdkdcfCP9tH/I4t/rQU6JwVD8=
+
+Name: org/eclipse/persistence/jpa/metamodel/Type.java
+SHA1-Digest: XfEkrL8OSZZUDhzXdpMz7lDuha0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /IdAccessor.class
+SHA1-Digest: AlNfYaYPvIkBiOr8lFbMW/aOKDk=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheRetr
+ ieveModeLegacyHint.class
+SHA1-Digest: QTBEthk2oiRNPWnxBHkcDznQbfk=
+
+Name: org/eclipse/persistence/jpa/PreUpdate.java
+SHA1-Digest: /CEi2GCbdT7FmA4ZCGGy4vgymxk=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eExpiryHint.class
+SHA1-Digest: caTJYDib/wQ/enxLopp1pReow3I=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /ElementCollectionAccessor.class
+SHA1-Digest: TX3mRn3gG8dNZq8oiCA4Y378ZKs=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eTypeHint.class
+SHA1-Digest: RdudCGI8CKt91tFlhWmKQVZhpCw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Union
+ PartitioningMetadata.class
+SHA1-Digest: i4GTCZub91MGoRSacE0DZmhtu1k=
+
+Name: org/eclipse/persistence/jpa/criteria/PluralJoin.java
+SHA1-Digest: 5vujRU25L7s/+C2TDEdxdEhHFT4=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eSizeHint.class
+SHA1-Digest: OgvfsI9zRXiIkqasIXKGQIFpj4E=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Exclusive
+ Hint.class
+SHA1-Digest: TpobDgz+wV4MkD3OnxaJdvT9Y0k=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/locking/Optimistic
+ LockingMetadata.class
+SHA1-Digest: AxRw3ujrkynOY4jls5cz01Wg/Xg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory$MetadataAnnotationVisitor.class
+SHA1-Digest: 2WoOEnx2FEGrLJxsD8uQIer/Dr0=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheUsag
+ eHint.class
+SHA1-Digest: OAAujIYawtAL5lC54ezwtMnuVUw=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/BasicListJoinImpl.
+ class
+SHA1-Digest: 76siRUcDhT6OHeN+yTnjHQfTgfU=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/EntityTransacti
+ onImpl.class
+SHA1-Digest: Z681/gPVl5ZFY+82NBgf0rgqTuA=
+
+Name: org/eclipse/persistence/jpa/criteria/Predicate.java
+SHA1-Digest: 4Vz3sWRsc1XVQ8bSeNqEONISa1o=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/AttributeImpl.cla
+ ss
+SHA1-Digest: ItgD6NYNjLa2ZM+sN3g7XGTISMY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/copypolicy/CustomC
+ opyPolicyMetadata.class
+SHA1-Digest: jdBaSo8e+XEL0YTF4mzUaO+LGBg=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$ResultSet
+ ConcurrencyHint.class
+SHA1-Digest: I2W3yBZ1sCmj3+BqRFiuAmacwsc=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JavaSECMPInitial
+ izer.class
+SHA1-Digest: GWuQmBs9ut1rFLYK8MEJUAbY1YI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/inheritance/Inheri
+ tanceMetadata.class
+SHA1-Digest: yk3D/FcFnX1OQ/60QvrKkG0rlyg=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/JTATransactionW
+ rapper.class
+SHA1-Digest: 5re6sO/4J9a963NDpMlVkPNSFtw=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/URLArchive.class
+SHA1-Digest: 8bRT8Ev8QCp2KUl6YJBl4HF/LbY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory$MetadataAnnotationArrayVisitor.class
+SHA1-Digest: 13kZ9wXGxIXBffZmIEPKnn5F7jE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Value
+ PartitioningMetadata.class
+SHA1-Digest: mfTg8OgN+r/TUGexdERO+FbvoMk=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ MappedSuperclassAccessor.class
+SHA1-Digest: 2Ljqui7tCaX2bEQ43t58V71zYYU=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/InternalSelection.
+ class
+SHA1-Digest: bTcn+SRiJTJA/IrB3FyHuCIOXpA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /MappedKeyMapAccessor.class
+SHA1-Digest: zo1AL2hywJGrxc15dtaMqv7h/p0=
+
+Name: org/eclipse/persistence/internal/jpa/CMP3Policy.class
+SHA1-Digest: byquDdzBBMjy5GinK8A/4TJqnG0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ XMLAttributes.class
+SHA1-Digest: rbMSZWoMN7l8nXdWC5g+qI3PyqI=
+
+Name: org/eclipse/persistence/jpa/QueryTimeoutException.java
+SHA1-Digest: o1wmNNNIayb6u7wrRS1EbR1XTVs=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/ExpressionImpl.cla
+ ss
+SHA1-Digest: Nuk32vVwHwdgoFA7EYWEwSvBa+A=
+
+Name: org/eclipse/persistence/jpa/orm_2_0.xsd
+SHA1-Digest: jE/1eVWXwk1cfCrjoIof+Z2quy4=
+
+Name: org/eclipse/persistence/jpa/spi/ClassTransformer.java
+SHA1-Digest: ywgbyGfIkZxwJQ29cjUr8h8MWx4=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$LoadGroup
+ AttributeHint.class
+SHA1-Digest: tLFPtQQROCjH4uTheO9O9UWeSTw=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/ManagedTypeImpl.c
+ lass
+SHA1-Digest: F2PT+70pAYA9PAOFmV4q5dg2WQI=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CursorPag
+ eSizeHint.class
+SHA1-Digest: qzo4+V3K5NWHxC05FKVBjDOiJsE=
+
+Name: org/eclipse/persistence/jpa/metamodel/PluralAttribute.java
+SHA1-Digest: apnNhQR2d3fkVuntfsMrrcDwQRA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/Discrimina
+ torColumnMetadata.class
+SHA1-Digest: /bWP4VtRMetiOBbco3g1wSrZSK4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLPersistence
+ UnitDefaults.class
+SHA1-Digest: JCW8fedrFaWhxy3rMR16GjA8ehg=
+
+Name: org/eclipse/persistence/jpa/Id.java
+SHA1-Digest: A+++NIJrTc4Jn2uXqn+80CHGtvo=
+
+Name: org/eclipse/persistence/jpa/MapKeyColumn.java
+SHA1-Digest: 1/XoJBvgMtCwciVbPOh2XepSrzw=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/ListJoinImpl.class
+SHA1-Digest: IhZmwIClNt+ypcI5rQE0FLCy5f0=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/MapJoinImpl.class
+SHA1-Digest: CsSLl2OZ3I8elsaYPqceLaqzy8Y=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eIgnoreNullHint.class
+SHA1-Digest: 2nZq4xA1RX75tm+8q3FMPGhRM74=
+
+Name: org/eclipse/persistence/jpa/FlushModeType.java
+SHA1-Digest: UQevTocMt0E4T7bh3jJ8irYleB4=
+
+Name: org/eclipse/persistence/jpa/OneToMany.java
+SHA1-Digest: N5coc0vDucRzVwlISBVYamPto+M=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/transformers/Write
+ TransformerMetadata.class
+SHA1-Digest: Ki7f2siY2OAFK6IDf0aJjLDhGt0=
+
+Name: org/eclipse/persistence/jpa/ElementCollection.java
+SHA1-Digest: zygmEw8lKU1bLXmYnOiaA/rLz1k=
+
+Name: org/eclipse/persistence/jpa/metamodel/MapAttribute.java
+SHA1-Digest: 9UQAGdZItO6/BrIAa/qcGRNd/WE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/cache/CacheMetadat
+ a.class
+SHA1-Digest: 1J2UJfugakdELopAZ1SaXgSgqiY=
+
+Name: org/eclipse/persistence/jpa/dynamic/DynamicIdentityPolicy.class
+SHA1-Digest: BFDMqQRffsFN60Jkl3UyKI2ETao=
+
+Name: org/eclipse/persistence/jpa/metamodel/ListAttribute.java
+SHA1-Digest: H71xwcjp5fyzHbb9L54LSg1D5QA=
+
+Name: org/eclipse/persistence/internal/jpa/jdbc/ConnectionProxyHandler
+ .class
+SHA1-Digest: oFSkIRUhQ47nUuAoiFHPj3i4hOU=
+
+Name: org/eclipse/persistence/jpa/MapKeyEnumerated.java
+SHA1-Digest: 3B8ToKOrVe29sPyB7kvz1pM7bqM=
+
+Name: org/eclipse/persistence/jpa/EntityExistsException.java
+SHA1-Digest: XY4ayHRoQlDE9OZvaeAokMiE314=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$BindParam
+ etersHint.class
+SHA1-Digest: mUjuw+0MOkZN8xpVtDZbgrFxszc=
+
+Name: org/eclipse/persistence/jpa/PrimaryKeyJoinColumn.java
+SHA1-Digest: KtKP+D9CU6Tw7i7IWrVx+hD0O1E=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/tables/IndexMetada
+ ta.class
+SHA1-Digest: 72CnqE+Yd4/oIo408BhlrT6h1ek=
+
+Name: org/eclipse/persistence/jpa/ManyToMany.java
+SHA1-Digest: aYvjDWFuacPmBV2QIt0GxdLzxls=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAnnotation.class
+SHA1-Digest: +3HIuhu8pJHvs6cRvEsUzCh7oWk=
+
+Name: org/eclipse/persistence/jpa/metamodel/MappedSuperclassType.java
+SHA1-Digest: iYZoD9VLS1eJ8t5qsKn8GXZtLZE=
+
+Name: org/eclipse/persistence/jpa/NonUniqueResultException.java
+SHA1-Digest: K1J+yUMoOZ1Wg+BDnBJST4I7ttk=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/PrimaryKey
+ Metadata.class
+SHA1-Digest: h261reURc/SqHwAlGbFfNTF9nBM=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/PersistenceWeaver.c
+ lass
+SHA1-Digest: kvZh1NvpXnJLdb3PTYDJn+MRR9o=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/ClassIn
+ stanceMetadata.class
+SHA1-Digest: btVx5+fpx1NxfXWp1uwFbc4I1IQ=
+
+Name: org/eclipse/persistence/jpa/PrePersist.java
+SHA1-Digest: wdkbPINL4eTlt8aDXtex1qgcIFc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /BasicMapAccessor.class
+SHA1-Digest: Ad63Lmma0OBLt9mfAaCQKailIIY=
+
+Name: org/eclipse/persistence/jpa/EntityListeners.java
+SHA1-Digest: xWqkWdsIuHIUASou41usZMa543w=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$2.class
+SHA1-Digest: LHEolh+rSGdRHIAK5tC1lFjaGtA=
+
+Name: org/eclipse/persistence/jpa/criteria/Join.java
+SHA1-Digest: UCAe3/eCcYEF/LSOWEoGOyc1OJg=
+
+Name: org/eclipse/persistence/jpa/metamodel/Metamodel.java
+SHA1-Digest: 2AT3btJ50AkMsDxj3xZWGrJqM+U=
+
+Name: org/eclipse/persistence/jpa/JpaQuery.class
+SHA1-Digest: hD5AzY2Q/UE0Hc7rG0ofbjnnrvs=
+
+Name: org/eclipse/persistence/jpa/JpaEntityManager.class
+SHA1-Digest: 56Xxbzjhkm1oxb8QKTVG+GUQxY4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataFile.class
+SHA1-Digest: l7Tzm3qF0N8uxKH58dtLugMdEx0=
+
+Name: org/eclipse/persistence/jpa/LockModeType.java
+SHA1-Digest: gOQ1089nw1vyds8vLB1Lf4bDfQc=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FlushHint
+ .class
+SHA1-Digest: NjDXZ2vXQsqs9dP/xx3w2fz9QmI=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/PluralAttributeIm
+ pl.class
+SHA1-Digest: WkXx32PIyX2nyEEvVv0T7p1gMng=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/AbstractStaticWeave
+ OutputHandler.class
+SHA1-Digest: izd8Xhjx/AYGkEjXRrsSAsSVuNU=
+
+Name: org/eclipse/persistence/jpa/criteria/SetJoin.java
+SHA1-Digest: EkjINdd022uYlZoA4P69bQKXEpE=
+
+Name: org/eclipse/persistence/jpa/SecondaryTable.java
+SHA1-Digest: oGilKQMKqo9mGnEsfoC3PFSYHNk=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerSetupImpl.clas
+ s
+SHA1-Digest: uiRsVotDvCdPkr0ZbkueYxwxDgE=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/SingularAttribute
+ Impl.class
+SHA1-Digest: Ni71G0WqBQMG6u5wBxfX+00Ia3s=
+
+Name: META-INF/eclipse.inf
+SHA1-Digest: 09gN05tobgS/MdtqyTNQhOhB73M=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$ResultCol
+ lectionTypeHint.class
+SHA1-Digest: GdwcpDQasqnw+kEUeBaQsVogNmc=
+
+Name: org/eclipse/persistence/jpa/IdClass.java
+SHA1-Digest: X96xhWcszStnSZ9WZ9fqrYFWbn4=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerFactoryImpl.cl
+ ass
+SHA1-Digest: enAfC/lifsXmWd/zteyJ/bDTPeE=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$ResultSet
+ TypeHint.class
+SHA1-Digest: M15uvQEuSKkrga0KJNzqd7dLbHM=
+
+Name: org/eclipse/persistence/jpa/DiscriminatorType.java
+SHA1-Digest: xtKcH8ENy4XdefXZ4PHZoMg0qYM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryType
+ Hint.class
+SHA1-Digest: PtPVvp7OODL1kQ8VRW8OyS+rj9o=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/TransactionWrap
+ perImpl.class
+SHA1-Digest: VF/sV6/BfhiOhlUAVGyWxCZxe7Q=
+
+Name: org/eclipse/persistence/jpa/JoinColumns.java
+SHA1-Digest: EjjqqWGIpZH8/222R8OFUH1R7eA=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataClass.class
+SHA1-Digest: azeei5YaM0Y3wwZyuRWLBPAWUvU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /VariableOneToOneAccessor.class
+SHA1-Digest: TG/ObG1Egf8s3oUmlTclLWVtFWU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ EntityAccessor.class
+SHA1-Digest: b3n7oqlWvf9oFM2TXHiLAP/T9eQ=
+
+Name: org/eclipse/persistence/jpa/spi/LoadState.java
+SHA1-Digest: j9bywGsMUSDtwYzYvz0rzhr+Xhw=
+
+Name: org/eclipse/persistence/jpa/dynamic/JPADynamicTypeBuilder.class
+SHA1-Digest: USr+9guIq6leO06jVxVlZQDfpmU=
+
+Name: org/eclipse/persistence/jpa/LockTimeoutException.java
+SHA1-Digest: dVp9qjMi/jC1yBt3AuXlNmRzsig=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /EmbeddedIdAccessor.class
+SHA1-Digest: 4if+tD9H9ynCs5XLz+aTjHHOwQI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/Metadata
+ Accessor.class
+SHA1-Digest: FhgMidpKHOjzHmJPFhaJOrKn0HE=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/AbstractQueryImpl.
+ class
+SHA1-Digest: rulvL3jhpCMxyZC97g2mIErpeCg=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/SEPersistenceUni
+ tInfo.class
+SHA1-Digest: Vh5vYxhRA0JKgEBcK47a4Jr2Kc0=
+
+Name: org/eclipse/persistence/jpa/PersistenceProvider.class
+SHA1-Digest: xIKePJ+DZBtnJS1vkDmalmQ9MTM=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/ORMetadata$SimpleO
+ RMetadata.class
+SHA1-Digest: Xtwt36H8xXxKN3YK+mdjAly4A1g=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchHint
+ .class
+SHA1-Digest: N6wtmyDSbdrqMb8TLo+d6/aI208=
+
+Name: org/eclipse/persistence/jpa/EntityNotFoundException.java
+SHA1-Digest: WPKzQUW0sYfXwMB2q+pSgbQzyrI=
+
+Name: org/eclipse/persistence/jpa/EntityTransaction.java
+SHA1-Digest: y0249zH1i+/lCnTwMH6LCeqLI/c=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$JDBCFetch
+ SizeHint.class
+SHA1-Digest: +5jnJb7Ly0wRkTsYxfDUxKpnqdU=
+
+Name: org/eclipse/persistence/jpa/FieldResult.java
+SHA1-Digest: v2Vsqjdh4JWDuxnzkd1km9ZO0Nw=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$7.class
+SHA1-Digest: ipOjuaqs4vmSz/4mWHoXKpk9Vlg=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Hint.clas
+ s
+SHA1-Digest: iUsBlZ8pHNammPJ7Qd0ckDwTv6E=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /BasicCollectionAccessor.class
+SHA1-Digest: r7iiWHBZvgRYkSJBrMCvu7DhrNs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/OverrideMe
+ tadata.class
+SHA1-Digest: +jBy6CfDuJeX7CuR4aZUaRmf9cQ=
+
+Name: org/eclipse/persistence/internal/jpa/DataSourceConfig.class
+SHA1-Digest: W0t7zpHtdWcLf37EwPi/AiuLtts=
+
+Name: org/eclipse/persistence/jpa/PostRemove.java
+SHA1-Digest: lXgHfXGFiz3/1Ky7DNgmjHDg80k=
+
+Name: org/eclipse/persistence/jpa/NoResultException.java
+SHA1-Digest: pS8OvjLqnPTS2ePOLYlrlK8k3/0=
+
+Name: org/eclipse/persistence/jpa/eclipselink_orm_2_3.xsd
+SHA1-Digest: HXsDVA/Kq5rIMPNKAXGM1ays6Io=
+
+Name: org/eclipse/persistence/jpa/CascadeType.java
+SHA1-Digest: Xy25budkzZhsZT3ryYcQ/l1DRtI=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$13.clas
+ s
+SHA1-Digest: zh7AIiC91W6ya/NnQ94YFSdOe90=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/CompoundSelectionI
+ mpl.class
+SHA1-Digest: NWMThP4bNoA3/MfNU2cqMJyF7zk=
+
+Name: org/eclipse/persistence/tools/weaving/jpa/StaticWeaveAntTask.cla
+ ss
+SHA1-Digest: +vgiV4e5JlmOLkDTZK03aLMO5Fk=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/PathImpl.class
+SHA1-Digest: 2FOSmrNauLkt8KCucatrvH0R/a4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/structures/StructM
+ etadata.class
+SHA1-Digest: +Yo8nvtaXRzWbXidTz7/vG4Zh+c=
+
+Name: org/eclipse/persistence/jpa/PersistenceUnitUtil.java
+SHA1-Digest: 6Qxhv/e3nr7yspGbNJGroMWDCQk=
+
+Name: org/eclipse/persistence/jpa/criteria/MapJoin.java
+SHA1-Digest: rJs2z33g85XEVnZkfIlulXZtpZ0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/DirectColu
+ mnMetadata.class
+SHA1-Digest: 6nVI1s4zpZQlcOEMwzdwzJXaHyM=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/SetJoinImpl.class
+SHA1-Digest: beyK1o85A4P/SygL4OuNfGUaaqQ=
+
+Name: org/eclipse/persistence/jpa/Persistence.java
+SHA1-Digest: yoBGlgO4T8r3AWjG9Ntz2nMgzJw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/changetracking/Cha
+ ngeTrackingMetadata.class
+SHA1-Digest: ChZTqQjK8GVF+ud/kJ9lLWBol9o=
+
+Name: org/eclipse/persistence/jpa/metamodel/EntityType.java
+SHA1-Digest: N9kP0I0C4Rt4L/xfYWkHcRKTaoE=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JarInputStreamUR
+ LArchive.class
+SHA1-Digest: tAPbLi8XS8LNHy1qYJ1WcwFxLlM=
+
+Name: org/eclipse/persistence/jpa/metamodel/SetAttribute.java
+SHA1-Digest: 1oDC3wRfgI91eKzaU+geA12/kUU=
+
+Name: org/eclipse/persistence/jpa/metamodel/CollectionAttribute.java
+SHA1-Digest: RuCbIIDDYsR1iEpMKjCMp4RbiFs=
+
+Name: org/eclipse/persistence/jpa/MapKeyJoinColumns.java
+SHA1-Digest: PBc6YhbD/mvY/l6BmPElY+roaDw=
+
+Name: org/eclipse/persistence/jpa/EntityManagerFactory.java
+SHA1-Digest: 5njCRvFuWCfdJhYo/JtoHtX2rx0=
+
+Name: org/eclipse/persistence/jpa/spi/PersistenceProvider.java
+SHA1-Digest: 1ZgUPKeNzb0YTIgu4gIZED6zQao=
+
+Name: org/eclipse/persistence/internal/jpa/JPAQuery.class
+SHA1-Digest: R2FcKAM+8zrlLZCtk0vAzcapwxk=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JarFileArchive.c
+ lass
+SHA1-Digest: 18Zp4IAWaI1YfZFftsIZM05NPP4=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/MappedSuperclassT
+ ypeImpl.class
+SHA1-Digest: AL2WIIiho+l8bMtJiSvlGWKq4T4=
+
+Name: org/eclipse/persistence/jpa/criteria/AbstractQuery.java
+SHA1-Digest: iyJb7LEoZm/jourY1YORL4BfGEI=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/StaticWeaveDirector
+ yOutputHandler.class
+SHA1-Digest: T/X1dg0Ks3nyFfEqyCemKjip9+8=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$LoadGroup
+ Hint.class
+SHA1-Digest: +HiPQLvSqzeuOMUdQIQfoL/kdy8=
+
+Name: org/eclipse/persistence/jpa/UniqueConstraint.java
+SHA1-Digest: Ka31FIhyKLKgdQPZ6HJmciJdsL4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/QueryRedir
+ ectorsMetadata.class
+SHA1-Digest: nRQw9ip4uPi3OPq8ACKJHW0BJjY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/OrderColum
+ nMetadata.class
+SHA1-Digest: wSDUOgukFiH7ZCYuQa6wUvbwH+8=
+
+Name: org/eclipse/persistence/jpa/orm_1_0.xsd
+SHA1-Digest: fZQ3GEedkL6korOUtAmOKfjuS4c=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Range
+ PartitioningMetadata.class
+SHA1-Digest: Y9fIdKKOAU9sc5Bw+/LH0VdmCW0=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CascadePo
+ licyHint.class
+SHA1-Digest: MUj/yMuyrEPJYjgXmcVaidGsj9A=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/PLSQLParam
+ eterMetadata.class
+SHA1-Digest: 8S1Vp3afzlphapqJhUUhhpojkME=
+
+Name: org/eclipse/persistence/jpa/Enumerated.java
+SHA1-Digest: YM1KakYdArvMcLABgXj/SmQnBvw=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/mappings/AccessMet
+ hodsMetadata.class
+SHA1-Digest: adHPUa4q8v7bAih0709FXLNym9o=
+
+Name: org/eclipse/persistence/jpa/metamodel/StaticMetamodel.java
+SHA1-Digest: ycEtsVU+n819F8ZzG6e6CYPHvkQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /OneToOneAccessor.class
+SHA1-Digest: whmM0fNe3MB2zv0R61q9MLv3+UE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ InterfaceAccessor.class
+SHA1-Digest: BqEnq0IvRX0z1aE6y6SLPpbdUeI=
+
+Name: org/eclipse/persistence/jpa/metadata/XMLMetadataSource.class
+SHA1-Digest: /FMBAnywR+qtPtypDsr/vxrA5zc=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/AttributeDetails.cl
+ ass
+SHA1-Digest: 0mAJwK4T/TTV1k6vgwhTUWjhDN4=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/ConstructorSelecti
+ onImpl.class
+SHA1-Digest: S23jTDyOi1w0f+EVS1wbouaU21E=
+
+Name: org/eclipse/persistence/jpa/Access.java
+SHA1-Digest: UjqZGFSs0eqON+xXuW0/CP6oaFE=
+
+Name: org/eclipse/persistence/jpa/metamodel/Attribute.java
+SHA1-Digest: xt6Ao0uAEWkaFPClqGjr4WmTXYY=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/DirectoryInsideJ
+ arURLArchive.class
+SHA1-Digest: Hl8p/H7lhdgqEkJkCvXSjCMWRqU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Enumera
+ tedMetadata.class
+SHA1-Digest: hRBeQVmEc8gszCcfdNHKlGbu5ck=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/converters/Seriali
+ zedMetadata.class
+SHA1-Digest: QcKFq9mIBliD+2dM6F/SMRqS384=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /VersionAccessor.class
+SHA1-Digest: RooofiioQIv+cLVL1wTKkIQiOcg=
+
+Name: org/eclipse/persistence/jpa/PreRemove.java
+SHA1-Digest: Js59mGExsgAG5OggQxvQMQqGtyM=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/TupleImpl.class
+SHA1-Digest: d6EUW/9y2MPyp1GEvNovLYBQi+Y=
+
+Name: org/eclipse/persistence/jpa/MapsId.java
+SHA1-Digest: FPhlJrVYxhK2ud3Gb8HF7Mol0cs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/partitioning/Round
+ RobinPartitioningMetadata.class
+SHA1-Digest: /xZ5ZHq4bozt8SFy5h4lMz3rrGM=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/ClassDetails.class
+SHA1-Digest: pgcsghhrsHBK/wy+NkIB4foF2fY=
+
+Name: org/eclipse/persistence/jpa/spi/PersistenceProviderResolverHolde
+ r.java
+SHA1-Digest: 3jgcz7fjoN5OhUqRrCMLMa6u8yU=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/FunctionExpression
+ Impl.class
+SHA1-Digest: a62rx7ZFO569O15Fr2dqviAWSeY=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/OrderImpl.class
+SHA1-Digest: nEkikB3zu5/T0eWFGvaYG1yB7D4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataFactory.class
+SHA1-Digest: is4E/jUcNMy7wwwhSWtbp5xSdwM=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$BatchHint
+ .class
+SHA1-Digest: 8+S04MHjNpFRS/BvaD5N9R8gpD4=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$1.class
+SHA1-Digest: A/Tqy4JzFrdbBhx9vovxdo2gwec=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JavaSECMPInitial
+ izer$1.class
+SHA1-Digest: a30NPQMoT0j2Ae6vLb6zkQ06RFU=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$QueryCach
+ eRandomizedExpiryHint.class
+SHA1-Digest: nIqhbuYkiocmnYaBB88d7R83Ass=
+
+Name: org/eclipse/persistence/jpa/FetchType.java
+SHA1-Digest: sCEjAKDDJ8c5CZial6gDcTX8F8o=
+
+Name: org/eclipse/persistence/internal/jpa/transaction/TransactionImpl
+ .class
+SHA1-Digest: XAeaGvZXRlyF3Jh3h4TKf6QpcbE=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataProject.cl
+ ass
+SHA1-Digest: 8+Kwl2kR33Vm4uwTXIjE3AdGoxg=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$FetchGrou
+ pHint.class
+SHA1-Digest: IFJGTWrCYHV4FqAZuamblAxJPfo=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAnnotatedElement.class
+SHA1-Digest: FeNYLg7mAPThA0dM0c5GqxyIIKg=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JavaSECMPInitial
+ izerAgent.class
+SHA1-Digest: mDdR3HIw+rjFz+MYFauDXla3/Ws=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/ArchiveFactoryIm
+ pl.class
+SHA1-Digest: 3R7Y1dqTmdnT0RaGhLyZmFyW1uI=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/RootImpl.class
+SHA1-Digest: 1FN4rwmqu4+cgaxoUIUOjlt6Hr0=
+
+Name: org/eclipse/persistence/jpa/TemporalType.java
+SHA1-Digest: yqIU4tYGOuEqdPz8kzYzcJmpG04=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Pessimist
+ icLockTimeoutHint.class
+SHA1-Digest: IT1jyPmvQnBHSi4sBVmNQobd0+I=
+
+Name: org/eclipse/persistence/jpa/metamodel/IdentifiableType.java
+SHA1-Digest: UfIu7C68xrxYRxdSsvCHxCc1zOs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/MetadataCo
+ lumn.class
+SHA1-Digest: k1z/z/7ueGRFQRRz17RERfOH+bc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/classes/
+ EmbeddableAccessor.class
+SHA1-Digest: c24WZRSJPJljirX+Uv0+hdBvCdw=
+
+Name: org/eclipse/persistence/jpa/AttributeOverride.java
+SHA1-Digest: VSqpJLgm4hupmYbwdw9E88AkkvI=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/FetchAttri
+ buteMetadata.class
+SHA1-Digest: MtWQ/hbYF2kHQPyo/9Ktv3zk9i4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /DirectAccessor.class
+SHA1-Digest: RfaFd3IJ9rlfu8SVYnC8D1fEZgg=
+
+Name: org/eclipse/persistence/jpa/MappedSuperclass.java
+SHA1-Digest: kcmbHI9g8hlfsNGQCv9Wg6zDFxQ=
+
+Name: org/eclipse/persistence/jpa/MapKeyClass.java
+SHA1-Digest: CCNoOsGhr6TJ2l7X/Y+O5E8GxnE=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/xml/parser/XMLEx
+ ception.class
+SHA1-Digest: hcf646aehkYAIekb70YOuiDKj30=
+
+Name: org/eclipse/persistence/jpa/AssociationOverrides.java
+SHA1-Digest: 5KeoL6y5Ez6ZrZ2Tl3lJ35KoRdI=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CacheStor
+ eModeHint.class
+SHA1-Digest: OanWRNr4MKpGXUDHO1nM3rPXfXM=
+
+Name: org/eclipse/persistence/jpa/EmbeddedId.java
+SHA1-Digest: DeQozU4U3IoIm4dtHIlC1r15Lh4=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/JPAInitializer.c
+ lass
+SHA1-Digest: wgT1DNf24zCvdfCQldnxUf49Lao=
+
+Name: org/eclipse/persistence/jpa/criteria/Order.java
+SHA1-Digest: 6ao2OK5ZeaADta+qmTzs7QBOgJI=
+
+Name: org/eclipse/persistence/jpa/criteria/Selection.java
+SHA1-Digest: umTvLljLX6eGPkPNnS4rLnCpHDY=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$CursorIni
+ tialSizeHint.class
+SHA1-Digest: J1VseK/QT6tsjFbuvhHEdSVpxNc=
+
+Name: org/eclipse/persistence/jpa/spi/ProviderUtil.java
+SHA1-Digest: DjbjKY3rAkpxBr9j9XSwe9tVHQ4=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/SelectionImpl.clas
+ s
+SHA1-Digest: P5U0E+wtOiI+iAZGbdMW4R6Wprw=
+
+Name: org/eclipse/persistence/jpa/criteria/Fetch.java
+SHA1-Digest: ZzS7TH9rJYQ5SVjZ77XH3HH/uig=
+
+Name: org/eclipse/persistence/jpa/Embedded.java
+SHA1-Digest: NASziV61yU9Aues2VzwjsxkaD4A=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$6.class
+SHA1-Digest: MQS+kwSrLa7xJ6bH/S29FAuVF/g=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$Parameter
+ DelimiterHint.class
+SHA1-Digest: vuOyMvmbH+EJq4Gn8dTEz1MQlIc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/ORMContentHand
+ ler.class
+SHA1-Digest: s/pCNovosULiBr/erjkPk6rdeCI=
+
+Name: org/eclipse/persistence/internal/jpa/EntityManagerImpl$1$12.clas
+ s
+SHA1-Digest: 4SXMRhdW5smUnqrUfHom5YWhCqo=
+
+Name: org/eclipse/persistence/jpa/Transient.java
+SHA1-Digest: bysYfXn/5SavVJhM1OWhxEYGtO0=
+
+Name: org/eclipse/persistence/jpa/Inheritance.java
+SHA1-Digest: qx1t40EYgtWWgwjoClsa1ieEC4c=
+
+Name: org/eclipse/persistence/internal/jpa/querydef/InImpl.class
+SHA1-Digest: I8anQ7UGXrAHrQLx+X46fqXYvPA=
+
+Name: org/eclipse/persistence/jpa/Query.java
+SHA1-Digest: RLoYq+RlKX4nFyW9mb/8VKhrHX8=
+
+Name: org/eclipse/persistence/jpa/dynamic/JPADynamicHelper.class
+SHA1-Digest: 953+TnCvFdfw57vmeTnZ2HK4LB8=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/columns/Relational
+ ColumnMetadata.class
+SHA1-Digest: vHUkJmIGQ2WGWIK0ROfqGmpQz7o=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLEntityMappi
+ ngsWriter.class
+SHA1-Digest: iuv3FT2sfIg8DS6Jkg5FBJZUwDA=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler.class
+SHA1-Digest: InVcfXrGjW/2TQMfeaLtJf38KjU=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/NamedQuery
+ Metadata.class
+SHA1-Digest: iNRym5Vi0m9fV4iW5C3OX3ZVNJI=
+
+Name: org/eclipse/persistence/jpa/ExcludeDefaultListeners.java
+SHA1-Digest: vEaEMmQON9aP51/PKFifht9Lywg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/mappings/OrderByMe
+ tadata.class
+SHA1-Digest: NuXWsv0Gcf4RRIeE9TC9VhNzvf4=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataMethod.class
+SHA1-Digest: y2LG18sco+VOVbNlrtdhwNcT5os=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/ListAttributeImpl
+ .class
+SHA1-Digest: dPlP1qDaqoN+98pBZovsLNLEY9k=
+
+Name: org/eclipse/persistence/internal/jpa/deployment/PersistenceUnitP
+ rocessor.class
+SHA1-Digest: kdEVkcFQWDTciDXmIuCJTG8Pkfk=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/queries/QueryHintM
+ etadata.class
+SHA1-Digest: Xg7/rz/sdRg6AvkXmA2tMsMNRqc=
+
+Name: org/eclipse/persistence/jpa/PersistenceUnit.java
+SHA1-Digest: 3TTEfqjh4dimLIo0UN8QWvGfcKQ=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/MetadataHelper.cla
+ ss
+SHA1-Digest: 5pbqv5xrh1V93jWwsluuY4fHreQ=
+
+Name: org/eclipse/persistence/jpa/criteria/ParameterExpression.java
+SHA1-Digest: VWWsGv6NniCKq2J8dbfmst0xwd0=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/mappings/MapKeyMet
+ adata.class
+SHA1-Digest: im69d3ZfuPXxzd8+l4l6Vec3OQg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/EntityLi
+ stener.class
+SHA1-Digest: 2alonYXn5JKurg42oKRts39GHTw=
+
+Name: org/eclipse/persistence/internal/jpa/weaving/TransformerFactory.
+ class
+SHA1-Digest: +Ce8XrsxmTocsN92rgQu0sT/dNo=
+
+Name: org/eclipse/persistence/jpa/Version.java
+SHA1-Digest: 7s6zlFF2AfSbRtH5AAxTGiggDrE=
+
+Name: org/eclipse/persistence/jpa/OneToOne.java
+SHA1-Digest: lg6PglycPahl3HPIU0sRM2yWQyo=
+
+Name: org/eclipse/persistence/jpa/MapKeyJoinColumn.java
+SHA1-Digest: DyVwH2gt4phON7JibAj1FSUTQ30=
+
+Name: org/eclipse/persistence/internal/jpa/QueryHintsHandler$JDBCTimeo
+ utHint.class
+SHA1-Digest: tLsxtvLz2yX8FwBZAtLW65r5NRw=
+
+Name: org/eclipse/persistence/internal/jpa/metamodel/EmbeddableTypeImp
+ l.class
+SHA1-Digest: CYxnGYVu9Yoky8i/Ib2tSElJo2c=
+
+Name: org/eclipse/persistence/jpa/AssociationOverride.java
+SHA1-Digest: /m0DTTkXgQ6wCbmH/U+AKKkewYs=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/listeners/EntityLi
+ stenerMetadata.class
+SHA1-Digest: S0E3fxBhnSlgVPWk65sCXU9aZOc=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/mappings/CascadeMe
+ tadata.class
+SHA1-Digest: qEL2d0cJJhJE5D+06L+3SaMqh+Q=
+
+Name: org/eclipse/persistence/jpa/NamedNativeQuery.java
+SHA1-Digest: X4h/YxniFubMyWIOw7QQlLmIuyc=
+
+Name: org/eclipse/persistence/tools/weaving/jpa/StaticWeaveClassTransf
+ ormer.class
+SHA1-Digest: CYaKySxmymfZ0BtKAo0XJhhSa70=
+
+Name: org/eclipse/persistence/jpa/GenerationType.java
+SHA1-Digest: cvnLoT3LzOuM38hsMeBSirTnRBs=
+
+Name: org/eclipse/persistence/jpa/PersistenceException.java
+SHA1-Digest: 4CoCDEjIBxaV3jK7U4V6apZ3uYI=
+
+Name: readme.html
+SHA1-Digest: /e6wfu0QHEUEN56BKgTuI2K7xAg=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /TransientAccessor.class
+SHA1-Digest: P+MHVqymhOTfS0gFISmjBLyyDww=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/mappings
+ /RelationshipAccessor.class
+SHA1-Digest: S5MZE376hxOrNvFtowo/UKIUmos=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/xml/XMLEntityMappi
+ ngsReader.class
+SHA1-Digest: j6kbv3HQd0PoIWrsTJ2cFEwJRe0=
+
+Name: org/eclipse/persistence/jpa/metamodel/ManagedType.java
+SHA1-Digest: WjqdWou0/mfk49qQ1C2NfxstTwY=
+
+Name: org/eclipse/persistence/jpa/Basic.java
+SHA1-Digest: 3ywb+KWlfSHogxGnOyOsXfpNpKY=
+
+Name: org/eclipse/persistence/internal/jpa/metadata/accessors/objects/
+ MetadataAsmFactory$ClassMetadataVisitor.class
+SHA1-Digest: Bx6nWYb2tiTP3rrlnW++pARcWy0=
+

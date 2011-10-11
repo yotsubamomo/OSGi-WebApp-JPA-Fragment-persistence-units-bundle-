@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Export-Package: com.gfactor.service.tableinfo;version="1.0.0";uses:="c
+ om.gfactor.jpa.child.tableinfo,org.springframework.beans.factory.anno
+ tation,org.springframework.transaction.annotation"
+Unversioned-Imports: *
+Built-By: momo
+Tool: Bnd-1.43.0
+Bundle-Name: Spring OSGi Bundle 
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0
+Build-Jdk: 1.6.0_26
+Bnd-LastModified: 1313477275968
+Bundle-ManifestVersion: 2
+Import-Package: com.gfactor.jpa.child.tableinfo,
+ com.gfactor.jpa.tableinfo.dao, 
+ org.springframework.beans.factory.annotation,
+ org.springframework.transaction,
+ org.springframework.transaction.annotation,
+ org.springframework.context.weaving,
+ org.springframework.transaction.aspectj
+Bundle-SymbolicName: plugin-webdomain-service-tableinfo
+

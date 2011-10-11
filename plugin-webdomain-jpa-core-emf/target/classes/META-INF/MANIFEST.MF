@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Export-Package: com.gfactor.jpa.core;version="1.0.0";uses:="org.spring
+ framework.beans,org.springframework.context,org.springframework.orm.j
+ pa.persistenceunit"
+Unversioned-Imports: *
+Built-By: momo
+Tool: Bnd-1.43.0
+Bundle-Name: Spring OSGi Bundle 
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0
+Build-Jdk: 1.6.0_26
+Bnd-LastModified: 1313477275968
+Bundle-ManifestVersion: 2
+Import-Bundle: org.eclipse.persistence.jpa;version="[2.0.0,2.4.0]"
+Import-Library: org.springframework.spring;version="[3.0.3,3.1)"
+Import-Package: com.gfactor.osgi.api.export.util,
+ javax.persistence,
+ javax.persistence.criteria,
+ javax.persistence.metamodel, 
+ javax.persistence.spi, 
+ javax.sql,
+ org.apache.commons.logging,
+ org.slf4j,
+ org.springframework.osgi.context,
+ org.osgi.framework,
+ org.springframework.beans,
+ org.springframework.beans.factory,
+ org.springframework.beans.factory.config,
+ org.springframework.context,
+ org.springframework.dao.annotation,
+ org.springframework.orm.jpa,
+ org.springframework.orm.jpa.persistenceunit,
+ org.springframework.orm.jpa.support,
+ org.springframework.orm.jpa.vendor,
+ org.springframework.transaction,
+ org.eclipse.persistence.internal.weaving,
+ org.eclipse.persistence.internal.descriptors,
+ org.eclipse.persistence.descriptors.changetracking,
+ org.eclipse.persistence.queries,
+ org.eclipse.persistence.sessions,
+ net.sf.cglib.proxy,
+ net.sf.cglib.core,
+ net.sf.cglib.reflect,
+ org.aspectj.lang,
+ org.aspectj.runtime.reflect
+Bundle-SymbolicName: plugin-webdomain-jpa-core-emf
+

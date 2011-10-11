@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: com.gfactor.service;version="1.0.0";uses:="org.springf
+ ramework.beans.factory.annotation"
+Unversioned-Imports: *
+Built-By: momo
+Tool: Bnd-1.43.0
+Bundle-Name: Spring OSGi Bundle 
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0
+Build-Jdk: 1.6.0_26
+Bnd-LastModified: 1313477275968
+Bundle-ManifestVersion: 2
+Import-Package: com.gfactor.jpa.child.tableinfo,
+ com.gfactor.service.tableinfo,
+ org.springframework.beans.factory.annotation
+Bundle-SymbolicName: plugin-webdomain-jpa-test.share
+

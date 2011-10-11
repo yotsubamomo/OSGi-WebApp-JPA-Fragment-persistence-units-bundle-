@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Export-Package: com.gfactor.test;version="1.0.0";
+  uses:="com.gfactor.tracker.iface,
+   org.osgi.framework,
+   org.springframework.beans,
+   org.springframework.context,
+   org.springframework.osgi.context"
+Unversioned-Imports: *
+Built-By: momo
+Tool: Bnd-1.43.0
+Bundle-Name: Spring OSGi Bundle for jpa bundle service layer
+Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 1.0.0
+Build-Jdk: 1.6.0_26
+Bnd-LastModified: 1313477275968
+Bundle-ManifestVersion: 2
+Import-Package: com.gfactor.osgi.api.export.util,
+ com.gfactor.tracker.iface,
+ org.osgi.framework,
+ org.slf4j,
+ org.springframework.beans,
+ org.springframework.context,
+ org.springframework.osgi.context
+Bundle-SymbolicName: plugin-webdomain-register.page-test
+
